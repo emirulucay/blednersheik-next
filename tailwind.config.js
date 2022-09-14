@@ -11,6 +11,7 @@ module.exports = {
         bgPurple: "#8D64FF",
         13: "#131315",
         blueLink: "#899DFF",
+        greenLink: "#4FFFC0",
       },
       container: {
         padding: {

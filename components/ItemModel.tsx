@@ -16,10 +16,10 @@ export default function Item({ name }: any) {
   // const [selectedImg, setSelectedImg] = useState<string>("");
 
   return (
-    <div className="inline-block cursor-pointer item group relative duration-600">
-      <div className="bg-13 flex items-center justify-center rounded-lg p-8 transition-all duration-500 border-[1px] border-white/[0.15]">
+    <div className="inline-block cursor-pointer item group relative">
+      <div className="bg-13 flex items-center justify-center rounded-lg p-8 transition-all duration-200 border-[1px] border-white/[0.15]">
         <Image
-          className="z-10 inline-block transition-all duration-500 group-hover:scale-110"
+          className="z-10 inline-block transition-all duration-200 group-hover:scale-110"
           src={`/models/${name}/${name}.png`}
           alt="item"
           width={280}

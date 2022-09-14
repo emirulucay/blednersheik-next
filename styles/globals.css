@@ -46,7 +46,7 @@
   .logo {
     letter-spacing: -0.03em;
 
-    background: linear-gradient(90deg, #6F97FF 0%, #806BFF 59.9%, #8D64FF 100%);
+    background: linear-gradient(90deg, #2ECC3E 0%, #2ECC6D 59.9%, #2ECCA6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -54,7 +54,7 @@
   }
 
   .button-sm {
-    background: linear-gradient(90deg, #4564B5 0%, #4643CC 59.9%, #673FD7 100%);
+    background: linear-gradient(90deg, #219D2D 0%, #229E54 59.9%, #209276 100%);
     border-radius: 4px;
     cursor: pointer;
     padding: 9px 14px;

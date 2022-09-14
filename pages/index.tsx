@@ -14,7 +14,7 @@ export default function Home() {
           <h3 className="font-inter font-bold text-2xl text-white tracking-tight">Some Models</h3>
           <div className="w-20">
             <Link href="/models">
-              <a className="font-medium font-inter text-blueLink flex">See all</a>
+              <a className="font-medium font-inter text-greenLink flex">See all</a>
             </Link>
           </div>
         </div>
