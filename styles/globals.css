@@ -1,26 +1,99 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+  @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
   }
+
+  ::-webkit-scrollbar {
+    width: 14px;
+    background: #232323;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #424242;
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+
+  }
+
+  ::-webkit-scrollbar-track {
+    width: 12px;
+  }
+
   body {
-    color: white;
-    background: black;
+    background: #0D0D0F;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+    font-stlye: normal;
+  }
+
+  .logo {
+    letter-spacing: -0.03em;
+
+    background: linear-gradient(90deg, #6F97FF 0%, #806BFF 59.9%, #8D64FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .button-sm {
+    background: linear-gradient(90deg, #4564B5 0%, #4643CC 59.9%, #673FD7 100%);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 9px 14px;
+    color: rgba(255, 255, 255, 1);
+    transition: 0.2s all;
+  }
+
+  .button-sm:hover {
+    color: rgba(255, 255, 255, 0.8);
+
+  }
+
+  .line-p {
+    line-height: 1.6;
+  }
+
+  .item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(92px);
+    transition: 0.4s all;
+    background: radial-gradient(150px circle at 30% 30%, #4564B5, 50%, transparent), radial-gradient(150px circle at 80% 50%, #4643CC, 50%, transparent), radial-gradient(150px circle at 20% 90%, #673FD7, 60%, transparent);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.5);
+
+  }
+
+  .item:hover::before {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.4s all;
+    transition-delay: 0.1s;
+
+
   }
 }
