@@ -41,7 +41,7 @@ export default function Item({ name }: any) {
         )}>
         <Image
           className={classNames("z-20", { "!hidden": !showDetail })}
-          src={`/../public/models/${name}/${name}.png`}
+          src={`/models/${name}/${name}.png`}
           alt="item"
           width={450}
           height={450}
