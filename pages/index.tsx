@@ -8,7 +8,7 @@ import Layout from "components/Layout";
 
 export default function Home() {
   return (
-    <div className="selection:bg-bgGreen selection:text-white">
+    <div>
       <Head>
         <title>blendersheik — Yahya Apaydın</title>
       </Head>
