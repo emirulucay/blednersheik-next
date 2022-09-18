@@ -88,9 +88,12 @@ export default function ModelItem({ name, single }: Model) {
       </div>
       <div
         onClick={() => setShowDetail(false)}
-        className={classNames("fixed backdrop-blur-md top-0 left-0 w-full h-full fixed z-20 transition-all duration-300 cursor-default", {
-          "!hidden": !showDetail,
-        })}></div>
+        className={classNames(
+          "fixed backdrop-blur-md top-0 left-0 w-full h-full fixed z-20 transition-all duration-300 cursor-default select-none",
+          {
+            "!hidden": !showDetail,
+          }
+        )}></div>
       <div
         className={classNames("fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2", {
           hidden: !showDetail,
