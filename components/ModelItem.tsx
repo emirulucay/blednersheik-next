@@ -104,17 +104,17 @@ export default function ModelItem({ name, single }: Model) {
             hidden: single,
           })}>
           <div
-            className="bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 p-2"
+            className="bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 p-2 select-none"
             onClick={() => handleImage("image2")}>
             <Image src={selectedImg.otherImages[0]} alt="item" width={120} height={120} />
           </div>
           <div
-            className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg z-20 transition-all duration-300 shadow z-40"
+            className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg z-20 transition-all duration-300 shadow z-40 select-none"
             onClick={() => handleImage("image3")}>
             <Image src={selectedImg.otherImages[1]} alt="item" width={120} height={120} />
           </div>
           <div
-            className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg z-20 transition-all duration-300 shadow z-40"
+            className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg z-20 transition-all duration-300 shadow z-40 select-none"
             onClick={() => handleImage("image4")}>
             <Image src={selectedImg.otherImages[2]} alt="item" width={120} height={120} />
           </div>
