@@ -13,7 +13,7 @@ export default function Home() {
         <title>blendersheik — Yahya Apaydın</title>
       </Head>
       <Layout>
-        <div className="mt-40 flex flex-col gap-4 container mx-auto py-40">
+        <div className="mt-40 flex flex-col gap-4 container mx-auto py-40 disable-tap">
           <div className="pl-6 md:pl-0 flex flex-col">
             <h3 className="font-inter font-bold text-2xl text-white tracking-tight">Some Models</h3>
             <div className="w-20">

@@ -11,8 +11,8 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+
 
   ::-webkit-scrollbar {
     width: 14px;
@@ -43,6 +43,11 @@
     font-family: 'Inter', sans-serif;
     font-stlye: normal;
   }
+
+  .disable-tap {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
 
   .logo {
     letter-spacing: -0.03em;
