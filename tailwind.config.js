@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         a2: "#2A2A2A",
+        "3a": "#3a3a3a",
         darkbg: "#0D0D0F",
         "09": "#09090A",
         87: "#878787",
@@ -12,6 +13,8 @@ module.exports = {
         13: "#131315",
         blueLink: "#899DFF",
         greenLink: "#4FFFC0",
+        "1b": "#1B1B1D",
+        bgGreen: "#2ECC87",
       },
       container: {
         padding: {
@@ -25,6 +28,9 @@ module.exports = {
           xl: "1240px",
           "2xl": "1496px",
         },
+      },
+      dropShadow: {
+        orange: "0 0px 8px rgba(79, 255, 192, .3)",
       },
     },
   },

@@ -1,14 +1,16 @@
 import React from "react";
-import Header from "components/Header";
-import Footer from "components/Footer";
+import Layout from "components/Layout";
 import sheik from "public/sheik.png";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function About() {
   return (
     <>
-      <div className="flex flex-col min-h-[100vh] selection:bg-bgPurple selection:text-gray-300">
-        <Header />
+      <Head>
+        <title>blednersheik — about</title>
+      </Head>
+      <Layout>
         <div className="container mx-auto flex justify-between items-center mt-24 md:mt-40 flex-wrap-reverse">
           <div className="w-full md:w-1/2 flex flex-col gap-8 justify-center items-center content-center">
             <p className="text-md !line-p font-inter font-medium text-87 lg:text-lg tracking-tight">
@@ -30,8 +32,7 @@ export default function About() {
             />
           </div>
         </div>
-        <Footer />
-      </div>
+      </Layout>
     </>
   );
 }
