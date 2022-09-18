@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="selection:bg-bgGreen selection:text-white">
       <Head>
-        <title>blednersheik — Yahya Apaydın</title>
+        <title>blendersheik — Yahya Apaydın</title>
       </Head>
       <Layout>
         <div className="mt-40 flex flex-col gap-4 container mx-auto py-40">

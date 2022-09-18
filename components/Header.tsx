@@ -26,7 +26,7 @@ export default function Header() {
         <div className="relative container mx-auto flex justify-center md:justify-between items-center h-[66px]">
           <h1>
             <Link href="/">
-              <a className="logo text-white font-inter font-bold text-[24px] select-none">blednersheik</a>
+              <a className="logo text-white font-inter font-bold text-[24px] select-none">blendersheik</a>
             </Link>
           </h1>
           <ul className="md:flex align-center justify-center gap-10 hidden">
@@ -79,7 +79,7 @@ export default function Header() {
           <div className="hidden md:block">
             <a
               className="button-sm font-inter transition duration-300 select-none text-sm !font-regular"
-              href="https://www.instagram.com/blednersheik/"
+              href="https://www.instagram.com/blendersheik/"
               target="_blank"
               rel="noreferrer noopener">
               Go Instagram

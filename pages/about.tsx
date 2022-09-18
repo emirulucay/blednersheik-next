@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>blednersheik — about</title>
+        <title>blendersheik — about</title>
       </Head>
       <Layout>
         <div className="container mx-auto flex justify-between items-center mt-24 md:mt-40 flex-wrap-reverse">

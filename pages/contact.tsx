@@ -24,7 +24,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>blednersheik — contact</title>
+        <title>blendersheik — contact</title>
       </Head>
       <Layout>
         <div className="container mx-auto flex gap-8 mt-40 flex-wrap-reverse">
