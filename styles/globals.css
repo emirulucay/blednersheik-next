@@ -94,6 +94,29 @@
     transition: 0.4s all;
     transition-delay: 0.1s;
 
+  }
+
+  .little-logo {
+    visibiliy: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    letter-spacing: -0.03em;
+    background: linear-gradient(90deg, #2ECC63 0%, #2ECC87 59.9%, #2ECCBC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: 12px;
+    transition: .3s all;
+    transition-delay: .1s;
+  }
+
+  .model-content:hover .little-logo {
+    transition-delay: 0.3s;
+    visibiliy: visible;
+    opacity: 1;
 
   }
 }
