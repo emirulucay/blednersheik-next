@@ -73,15 +73,16 @@ export default function ModelItem({ name, single }: Model) {
     <div className="inline-block cursor-pointer group relative">
       {/* sayfada görünen resim */}
       <div
-        className="bg-13 flex items-center justify-center rounded-lg p-6 transition-all duration-300 border-[1px] border-white/[0.15]
-       model-content sm:w-[280px] sm:h-[280px] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[325px] xl:h-[325px] 2xl:w-[350px] 2xl:h-[350px] group">
+        className="bg-13 relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
+       model-content sm:w-[30vw] sm:h-[30vw] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[325px] xl:h-[325px] 2xl:w-[350px] 2xl:h-[350px] group">
         <Image
           className="z-10 inline-block transition-all duration-200 group-hover:drop-shadow-orange"
           src={`/models/${name}/${name}-1.png`}
           alt={details.name}
-          width={300}
-          height={300}
+          width="280%"
+          height="280%"
           layout="intrinsic"
+          objectFit="contain"
           onClick={() => setShowDetail(true)}
         />
         <span className="little-logo font-inter font-semibold">{details.name}</span>
@@ -106,26 +107,28 @@ export default function ModelItem({ name, single }: Model) {
           <div
             className="bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 p-2 select-none"
             onClick={() => handleImage("image2")}>
-            <Image src={selectedImg.otherImages[0]} alt="item" width={120} height={120} />
+            <Image src={selectedImg.otherImages[0]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
           </div>
           <div
             className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 select-none"
             onClick={() => handleImage("image3")}>
-            <Image src={selectedImg.otherImages[1]} alt="item" width={120} height={120} />
+            <Image src={selectedImg.otherImages[1]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
           </div>
           <div
             className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 select-none"
             onClick={() => handleImage("image4")}>
-            <Image src={selectedImg.otherImages[2]} alt="item" width={120} height={120} />
+            <Image src={selectedImg.otherImages[2]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
           </div>
         </div>
-        <div className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40">
+        <div className="bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 flex items-center justify-center">
           <Image
             className={classNames("z-20", { "!hidden": !showDetail })}
             src={selectedImg.selected}
             alt={details.name}
-            width={450}
-            height={450}
+            width="400%"
+            height="400%"
+            layout="intrinsic"
+            objectFit="contain"
           />
         </div>
       </div>

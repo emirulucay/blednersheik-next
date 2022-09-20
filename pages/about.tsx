@@ -3,12 +3,14 @@ import Layout from "components/Layout";
 import sheik from "public/sheik.png";
 import Image from "next/image";
 import Head from "next/head";
+import { useState } from "react";
 
 export default function About() {
+  const [state, setState] = useState<boolean>();
   return (
     <>
       <Head>
-        <title>blendersheik — about</title>
+        <title>blendersheik — About</title>
       </Head>
       <Layout>
         <div className="container mx-auto flex justify-between items-center mt-24 md:mt-40 flex-wrap-reverse">

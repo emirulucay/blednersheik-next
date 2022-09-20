@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import ModelItem from "../components/ModelItem";
+import Footer from "components/Footer";
+import Header from "components/Header";
+import ModelItem from "components/ModelItem";
 import Link from "next/link";
 import Layout from "components/Layout";
 

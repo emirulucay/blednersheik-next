@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="fixed top-0 h-[66px] left-0 w-full bg-darkbg/[0.98] before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-100">
+      <header className="fixed top-0 h-[60px] left-0 w-full bg-darkbg/[0.98] before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-100 flex items-center">
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(
@@ -23,18 +23,13 @@ export default function Header() {
               "-rotate-45 -translate-y-[1px]": burgerOpen,
             })}></span>
         </div>
-        <div className="relative container mx-auto flex justify-center md:justify-between items-center h-[66px]">
+        <div className="relative container mx-auto flex justify-center md:justify-center items-center h-[66px]">
           <h1>
             <Link href="/">
-              <a className="logo text-white font-inter font-bold text-[24px] select-none">blendersheik</a>
+              <a className="logo text-white font-inter font-bold text-[22px] select-none">blendersheik</a>
             </Link>
           </h1>
-          <ul className="md:flex align-center justify-center gap-10 hidden">
-            <li>
-              <a className="text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none" href="#">
-                Buy
-              </a>
-            </li>
+          <ul className="md:flex align-center justify-center gap-10 hidden flex-1">
             <li>
               <Link href="/models">
                 <a
@@ -82,21 +77,16 @@ export default function Header() {
               href="https://www.instagram.com/blendersheik/"
               target="_blank"
               rel="noreferrer noopener">
-              Go Instagram
+              Buy Models
             </a>
           </div>
           <ul
             className={classNames(
-              "w-full h-[100vh] flex md:hidden absolute top-[67px] left-0 flex-col bg-09 gap-8 px-6 py-6 transition duration-300",
+              "w-full h-[100vh] flex md:hidden fixed top-[61px] left-0 flex-col bg-09 gap-8 px-6 py-6 transition duration-300",
               {
-                "-translate-x-[100%] invisible": !burgerOpen,
+                "-translate-x-full invisible opacity-0": !burgerOpen,
               }
             )}>
-            <li>
-              <a className="text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl" href="#">
-                Buy
-              </a>
-            </li>
             <li>
               <Link href="/models">
                 <a
@@ -159,7 +149,7 @@ export default function Header() {
                 href="https://www.instagram.com/blednersheik/"
                 target="_blank"
                 rel="noreferrer noopener">
-                Instagram
+                Buy
               </a>
             </li>
           </ul>
