@@ -1,4 +1,10 @@
 export interface Model {
   name: string;
-  single: boolean;
+  count: number;
+}
+
+export interface Context {
+  theme: number;
+  setTheme: any;
+  themeValues: object;
 }

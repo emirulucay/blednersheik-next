@@ -1,16 +1,19 @@
 import classNames from "classnames";
 import Link from "next/link";
 import React, { useState } from "react";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
+import { MainContext, useContext } from "context";
+import ThemeChanger from "./ThemeChanger";
 
 export default function Header() {
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
 
   const router = useRouter();
+  const { theme, themeValues } = useContext(MainContext);
 
   return (
     <div>
-      <header className="fixed top-0 h-[60px] left-0 w-full bg-darkbg/[0.98] before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-100 flex items-center">
+      <header className="fixed overflow-visible top-0 h-[60px] left-0 w-full bg-darkbg/[0.98] before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-100 flex items-center">
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(
@@ -26,14 +29,14 @@ export default function Header() {
         <div className="relative container mx-auto flex justify-center md:justify-center items-center h-[66px]">
           <h1>
             <Link href="/">
-              <a className="logo text-white font-inter font-bold text-[22px] select-none">blendersheik</a>
+              <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-[22px] select-none `}>blendersheik</a>
             </Link>
           </h1>
           <ul className="md:flex align-center justify-center gap-10 hidden flex-1">
             <li>
               <Link href="/models">
                 <a
-                  className={classNames("text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  className={classNames("text-white/[0.59] hover:text-white font-inter font-medium transition duration-300 select-none", {
                     "!text-white": router.pathname == "/models",
                   })}>
                   Models
@@ -43,7 +46,7 @@ export default function Header() {
             <li>
               <Link href="/builds">
                 <a
-                  className={classNames("text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  className={classNames("text-white/[0.59] hover:text-white font-inter font-medium transition duration-300 select-none", {
                     "!text-white": router.pathname == "/builds",
                   })}>
                   Builds
@@ -53,7 +56,7 @@ export default function Header() {
             <li>
               <Link href="/about">
                 <a
-                  className={classNames("text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  className={classNames("text-white/[0.59] hover:text-white font-inter font-medium transition duration-300 select-none", {
                     "!text-white": router.pathname == "/about",
                   })}>
                   About
@@ -63,7 +66,7 @@ export default function Header() {
             <li>
               <Link href="/contact">
                 <a
-                  className={classNames("text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  className={classNames("text-white/[0.59] hover:text-white font-inter font-medium transition duration-300 select-none", {
                     "!text-white": router.pathname == "/contact",
                   })}>
                   Contact
@@ -71,14 +74,15 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
             <a
-              className="button-sm font-inter transition duration-300 select-none text-sm !font-regular"
+              className={`${themeValues[theme]?.bg} button-sm font-inter transition duration-300 select-none text-sm font-medium`}
               href="https://www.instagram.com/blendersheik/"
               target="_blank"
               rel="noreferrer noopener">
               Buy Models
             </a>
+            <ThemeChanger />
           </div>
           <ul
             className={classNames(

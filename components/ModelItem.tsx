@@ -12,7 +12,7 @@ import { Model } from "types/types";
   mobil halde resimler division'ı yukarıda absolute ile konumlandırılacak. flex olacak.
   web halinde resimler division'ı solda bulunacak.
 */
-export default function ModelItem({ name, single }: Model) {
+export default function ModelItem({ name, count }: Model) {
   const details = {
     name: name.replaceAll("-", " "),
     link1: `/models/${name}/${name}-1.png`,
@@ -70,7 +70,7 @@ export default function ModelItem({ name, single }: Model) {
   };
 
   return (
-    <div className="disable-tap mx-auto md:mx-0 inline-block cursor-pointer group relative">
+    <div className="mx-auto md:mx-0 inline-block cursor-pointer group relative">
       {/* sayfada görünen resim */}
       <div
         className="bg-13 relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
@@ -85,7 +85,7 @@ export default function ModelItem({ name, single }: Model) {
           objectFit="contain"
           onClick={() => setShowDetail(true)}
         />
-        <span className="little-logo font-inter font-semibold">{details.name}</span>
+        <span className="little-logo font-medium">{details.name}</span>
       </div>
       <div
         onClick={() => setShowDetail(false)}
@@ -101,26 +101,36 @@ export default function ModelItem({ name, single }: Model) {
         })}>
         {/* alttaki/yandaki resimler */}
         <div
-          className={classNames("flex flex-row lg:flex-col justify-between items-start", {
-            hidden: single,
+          className={classNames("flex flex-row lg:flex-col gap-2 items-start cursor-default justifyt-start", {
+            "hidden invisible": count < 2,
           })}>
           <div
-            className="bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 p-2 select-none"
+            className="bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 z-40 p-2 select-none cursor-pointer"
             onClick={() => handleImage("image2")}>
             <Image src={selectedImg.otherImages[0]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
           </div>
           <div
-            className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 select-none"
+            className={classNames(
+              "p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 z-40 select-none",
+              {
+                "hidden invisible": count < 3,
+              }
+            )}
             onClick={() => handleImage("image3")}>
             <Image src={selectedImg.otherImages[1]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
           </div>
           <div
-            className="p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 select-none"
+            className={classNames(
+              "p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 select-none",
+              {
+                "hidden invisible": count < 4,
+              }
+            )}
             onClick={() => handleImage("image4")}>
             <Image src={selectedImg.otherImages[2]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
           </div>
         </div>
-        <div className="bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 flex items-center justify-center">
+        <div className="bg-13/[0.6] border-[1px] px-4 border-white/[0.15] rounded-lg transition duration-300 shadow z-40 flex items-center justify-center">
           <Image
             className={classNames("z-20", { "!hidden": !showDetail })}
             src={selectedImg.selected}

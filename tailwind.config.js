@@ -7,14 +7,15 @@ module.exports = {
         a2: "#2A2A2A",
         "3a": "#3a3a3a",
         darkbg: "#0D0D0F",
-        "09": "#09090A",
+        "09": "#0c0c0c",
         87: "#878787",
         bgPurple: "#8D64FF",
         13: "#131315",
-        blueLink: "#899DFF",
+        spaceLink: "#899DFF",
         greenLink: "#4FFFC0",
         "1b": "#1B1B1D",
         bgGreen: "#2ECC87",
+        westLink: "#FFA661",
       },
       container: {
         padding: {

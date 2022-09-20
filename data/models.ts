@@ -1,38 +1,35 @@
-export interface modelData {
-  name: string;
-  single: boolean;
-}
+import { Model } from "types/types"
 
-export const models:modelData[] = [{
+export const models:Model[] = [{
   name: 'buzz-light-year',
-  single: false
+  count: 4
 },
 {
   name:'piston-cup',
-  single: false
+  count: 4
 },
 {
   name:'toy-dog',
-  single: true
+  count: 1
 },
 {
   name:'pizza',
-  single: false
+  count: 2
 },
 {
   name:'pringles',
-  single: false
+  count: 4
 },
 {
   name:'armchair',
-  single: true
+  count: 1
 },
 {
-  name:'l-seat',
-  single: true
+  name:'L-seat',
+  count: 1
 },
 {
   name:'scot',
-  single: false
+  count: 2
 },
 ]

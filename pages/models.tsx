@@ -15,7 +15,7 @@ export default function Models() {
           <h3 className="font-inter text-bold tracking-tight text-white font-bold text-2xl">All Models</h3>
           <div className="flex gap-2 md:gap-4 flex-wrap mt-8">
             {models.map((model, index) => (
-              <ModelItem name={model.name} key={index} single={model.single} />
+              <ModelItem name={model.name} key={index} count={model.count} />
             ))}
           </div>
         </div>

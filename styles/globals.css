@@ -35,23 +35,51 @@
 
   body {
     background: #0D0D0F;
+    font-family: 'Inter', sans-serif;
+    font-stlye: normal;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
 @layer utilities {
-  .font-inter {
-    font-family: 'Inter', sans-serif;
-    font-stlye: normal;
-  }
-
-  .disable-tap {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-
 
   .logo {
     letter-spacing: -0.03em;
+  }
 
+  .westLogo {
+    background: linear-gradient(90deg, #CCBC2E 0%, #E29A2D 59.9%, #FF943E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .westBg {
+    background: linear-gradient(90deg, #A59822 0%, #B87C23 46.87%, #C4622B 100%);
+  }
+
+  .westLink {
+    @apply text-westLink
+  }
+
+  .spaceLogo {
+    background: linear-gradient(90deg, #6F97FF 0%, #806BFF 59.9%, #8D64FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .spaceBg {
+    background: linear-gradient(90deg, #4564B5 0%, #4643CC 59.9%, #673FD7 100%);
+  }
+
+  .spaceLink {
+    @apply text-spaceLink
+  }
+
+  .greenLogo {
     background: linear-gradient(90deg, #2ECC63 0%, #2ECC87 59.9%, #2ECCBC 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,8 +87,16 @@
     text-fill-color: transparent;
   }
 
-  .button-sm {
+
+  .greenBg {
     background: linear-gradient(90deg, #219D50 0%, #229E6A 59.9%, #209286 100%);
+  }
+
+  .greenLink {
+    @apply text-greenLink
+  }
+
+  .button-sm {
     border-radius: 4px;
     cursor: pointer;
     padding: 9px 14px;
@@ -77,52 +113,24 @@
     line-height: 1.6;
   }
 
-  .item::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    filter: blur(92px);
-    transition: 0.4s all;
-    background: radial-gradient(150px circle at 30% 30%, #4564B5, 50%, transparent), radial-gradient(150px circle at 80% 50%, #4643CC, 50%, transparent), radial-gradient(150px circle at 20% 90%, #673FD7, 60%, transparent);
-    visibility: hidden;
-    opacity: 0;
-    transform: scale(0.5);
-
-  }
-
-  .item:hover::before {
-    visibility: visible;
-    opacity: 1;
-    transition: 0.4s all;
-    transition-delay: 0.1s;
-
-  }
-
   .little-logo {
     visibiliy: hidden;
     opacity: 0;
     position: absolute;
     bottom: 16px;
     right: 16px;
-    letter-spacing: -0.03em;
-    background: linear-gradient(90deg, #2ECC63 0%, #2ECC87 59.9%, #2ECCBC 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 1);
     font-size: 12px;
-    transition: .3s all;
+    transition: .2s all;
     transition-delay: .1s;
+    font-weight: 500;
   }
 
   .model-content:hover .little-logo {
     transition-delay: 0.3s;
     visibiliy: visible;
-    opacity: 1;
+    opacity: .8;
 
   }
 }
