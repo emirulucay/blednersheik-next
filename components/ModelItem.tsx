@@ -70,7 +70,7 @@ export default function ModelItem({ name, single }: Model) {
   };
 
   return (
-    <div className="inline-block cursor-pointer group relative">
+    <div className="disable-tap mx-auto md:mx-none inline-block cursor-pointer group relative">
       {/* sayfada görünen resim */}
       <div
         className="bg-13 relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
