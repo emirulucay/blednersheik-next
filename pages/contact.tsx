@@ -2,6 +2,7 @@ import Layout from "components/Layout";
 import { useFormik } from "formik";
 import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import Head from "next/head";
+import { MainContext, useContext } from "context";
 
 interface Values {
   name: string;
@@ -21,6 +22,8 @@ export default function Contact() {
     },
   });
 
+  const { theme, themeValues } = useContext(MainContext);
+
   return (
     <>
       <Head>
@@ -29,7 +32,7 @@ export default function Contact() {
       <Layout>
         <div className="container mx-auto flex gap-8 mt-40 flex-wrap-reverse">
           <div className="flex flex-col md:w-1/2 gap-8 w-full mt-12 md:mt-0">
-            <h4 className="font-inter font-bold text-2xl text-white tracking-tight">Send Me a Message</h4>
+            <h5 className="font-inter font-bold text-2xl text-white tracking-tight">Send Me a Message</h5>
             <form noValidate className="flex flex-col gap-8" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-2">
                 <label className="text-gray-200 font-inter font-semibold tracking-tight leading-none" htmlFor="namee">
@@ -93,7 +96,7 @@ export default function Contact() {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-greenLink font-regular text-lg font-inter leading-none opacity-80 hover:underline hover:opacity-100 transition-all duration-200">
+                  className={`${themeValues[theme]?.link} font-regular text-lg font-inter leading-none hover:underline hover:opacity-100 transition-all duration-200`}>
                   hire me
                 </a>
               </div>
@@ -106,7 +109,7 @@ export default function Contact() {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-greenLink font-regular text-lg font-inter leading-none opacity-80 hover:underline hover:opacity-100 transition-all duration-200">
+                  className={`${themeValues[theme]?.link} font-regular text-lg font-inter leading-none hover:underline hover:opacity-100 transition-all duration-200`}>
                   follow me
                 </a>
               </div>
@@ -119,7 +122,7 @@ export default function Contact() {
                   href="https://instagram.com/blendersheik"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-greenLink font-regular text-lg font-inter leading-none opacity-80 hover:underline hover:opacity-100 transition-all duration-200">
+                  className={`${themeValues[theme]?.link} font-regular text-lg font-inter leading-none hover:underline hover:opacity-100 transition-all duration-200`}>
                   follow me
                 </a>
               </div>

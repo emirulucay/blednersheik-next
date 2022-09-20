@@ -14,16 +14,19 @@ function MyApp({ Component, pageProps }) {
       bg: "greenBg",
       logo: "greenLogo",
       link: "greenLink",
+      selection: "selection:bg-greenSelection",
     },
     2: {
       bg: "spaceBg",
       logo: "spaceLogo",
       link: "spaceLink",
+      selection: "selection:bg-spaceSelection",
     },
     3: {
       bg: "westBg",
       logo: "westLogo",
       link: "westLink",
+      selection: "selection:bg-westSelection",
     },
   };
   const data = {
@@ -34,7 +37,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <MainContext.Provider value={data}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </MainContext.Provider>
   );
 }

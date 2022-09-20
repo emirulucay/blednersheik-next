@@ -29,7 +29,7 @@ export default function Header() {
         <div className="relative container mx-auto flex justify-center md:justify-center items-center h-[66px]">
           <h1>
             <Link href="/">
-              <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-[22px] select-none `}>blendersheik</a>
+              <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-[22px] select-none`}>blendersheik</a>
             </Link>
           </h1>
           <ul className="md:flex align-center justify-center gap-10 hidden flex-1">

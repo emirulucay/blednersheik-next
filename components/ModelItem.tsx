@@ -76,7 +76,7 @@ export default function ModelItem({ name, count }: Model) {
         className="bg-13 relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
        model-content sm:w-[30vw] sm:h-[30vw] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[325px] xl:h-[325px] 2xl:w-[350px] 2xl:h-[350px] group">
         <Image
-          className="z-10 inline-block transition-all duration-200 group-hover:drop-shadow-orange"
+          className="z-10 inline-block transition-all duration-200 group-hover:scale-110"
           src={`/models/${name}/${name}-1.png`}
           alt={details.name}
           width="280%"
@@ -111,7 +111,7 @@ export default function ModelItem({ name, count }: Model) {
           </div>
           <div
             className={classNames(
-              "p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 z-40 select-none",
+              "p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 z-40 select-none cursor-pointer",
               {
                 "hidden invisible": count < 3,
               }
@@ -121,7 +121,7 @@ export default function ModelItem({ name, count }: Model) {
           </div>
           <div
             className={classNames(
-              "p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 select-none",
+              "p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 select-none cursor-pointer",
               {
                 "hidden invisible": count < 4,
               }

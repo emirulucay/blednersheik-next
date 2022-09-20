@@ -14,8 +14,10 @@ module.exports = {
         spaceLink: "#899DFF",
         greenLink: "#4FFFC0",
         "1b": "#1B1B1D",
-        bgGreen: "#2ECC87",
         westLink: "#FFA661",
+        greenSelection: "#2ECC9F",
+        westSelection: "#C57E2E",
+        spaceSelection: "#8B65FF",
       },
       container: {
         padding: {
@@ -29,9 +31,6 @@ module.exports = {
           xl: "1240px",
           "2xl": "1496px",
         },
-      },
-      dropShadow: {
-        orange: "0 0px 8px rgba(79, 255, 192, .3)",
       },
     },
   },
