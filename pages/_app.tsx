@@ -4,7 +4,6 @@ import { MainContext } from "context";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState<number>(1);
-
   useEffect(() => {
     setTheme(+localStorage.getItem("theme") || 1);
   }, []);

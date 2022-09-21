@@ -12,7 +12,7 @@ export default function ThemeChanger() {
         onClick={() => setShowMenu((prev) => !prev)}></div>
       <div
         className={classNames(
-          "absolute  left-0 -translate-x-[84px] top-[50px] p-2 bg-13/[.9] backdrop-blur-md border-[1px] border-3a rounded-lg transition-opacity duration-500 w-[200px] overflow-hidden",
+          "absolute  left-0 -translate-x-[168px] top-[50px] p-2 bg-13/[.9] backdrop-blur-md border-[1px] border-3a rounded-lg transition-opacity duration-500 w-[200px] overflow-hidden",
           {
             "-translate-y-[200%] opacity-0 unvisible": !showMenu,
           }

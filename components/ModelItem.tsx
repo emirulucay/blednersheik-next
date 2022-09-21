@@ -3,6 +3,7 @@ import { useState } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import { Model } from "types/types";
+import { MainContext, useContext } from "context";
 
 /*
   bir array ile resimleri alacağız. 
@@ -69,12 +70,16 @@ export default function ModelItem({ name, count }: Model) {
     }
   };
 
+  const { themeValues, theme } = useContext(MainContext);
+
   return (
-    <div className="mx-auto md:mx-0 inline-block cursor-pointer group relative">
+    <div className={`mx-auto md:mx-0 inline-block cursor-pointer group relative`}>
       {/* sayfada görünen resim */}
       <div
+        className={`${themeValues[theme]?.bg} w-full h-full absolute top-0 left-0 rounded-lg group-hover:-translate-x-2 group-hover:-translate-y-2 transition duration-300`}></div>
+      <div
         className="bg-13 relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
-       model-content sm:w-[30vw] sm:h-[30vw] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[325px] xl:h-[325px] 2xl:w-[350px] 2xl:h-[350px] group">
+       model-content sm:w-[30vw] sm:h-[30vw] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[325px] xl:h-[325px] group">
         <Image
           className="z-10 inline-block transition-all duration-200 group-hover:scale-110"
           src={`/models/${name}/${name}-1.png`}
@@ -96,12 +101,15 @@ export default function ModelItem({ name, count }: Model) {
           }
         )}></div>
       <div
-        className={classNames("fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2", {
-          hidden: !showDetail,
-        })}>
+        className={classNames(
+          "w-full md:w-auto px-2 fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2",
+          {
+            hidden: !showDetail,
+          }
+        )}>
         {/* alttaki/yandaki resimler */}
         <div
-          className={classNames("flex flex-row lg:flex-col gap-2 items-start cursor-default justifyt-start", {
+          className={classNames(" flex flex-row lg:flex-col gap-2 items-start cursor-default justifyt-start", {
             "hidden invisible": count < 2,
           })}>
           <div
@@ -130,9 +138,10 @@ export default function ModelItem({ name, count }: Model) {
             <Image src={selectedImg.otherImages[2]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
           </div>
         </div>
+        {/* clicked büyük image */}
         <div className="bg-13/[0.6] border-[1px] px-4 border-white/[0.15] rounded-lg transition duration-300 shadow z-40 flex items-center justify-center">
           <Image
-            className={classNames("z-20", { "!hidden": !showDetail })}
+            className={classNames("z-20 sm:w-full sm:h ", { "!hidden": !showDetail })}
             src={selectedImg.selected}
             alt={details.name}
             width="400%"
