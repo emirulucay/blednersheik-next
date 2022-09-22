@@ -81,7 +81,7 @@ export default function Contact() {
                 />
               </div>
 
-              <button className="button-sm inline w-[90px] font-inter font-medium text-white" type="submit">
+              <button className={`${themeValues[theme]?.bg} button-sm inline w-[90px] font-inter font-medium text-white`} type="submit">
                 Send
               </button>
             </form>

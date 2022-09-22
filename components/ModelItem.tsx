@@ -76,12 +76,10 @@ export default function ModelItem({ name, count }: Model) {
     <div className={`mx-auto md:mx-0 inline-block cursor-pointer group relative`}>
       {/* sayfada görünen resim */}
       <div
-        className={`${themeValues[theme]?.bg} w-full h-full absolute top-0 left-0 rounded-lg group-hover:-translate-x-2 group-hover:-translate-y-2 transition duration-300`}></div>
-      <div
-        className="bg-13 relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
-       model-content sm:w-[30vw] sm:h-[30vw] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[325px] xl:h-[325px] group">
+        className="relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
+        model-content sm:w-[30vw] sm:h-[30vw] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[325px] xl:h-[325px] group overflow-hidden">
         <Image
-          className="z-10 inline-block transition-all duration-200 group-hover:scale-110"
+          className="z-10 inline-block transition-all duration-500 group-hover:animate-zoom"
           src={`/models/${name}/${name}-1.png`}
           alt={details.name}
           width="280%"
@@ -90,6 +88,9 @@ export default function ModelItem({ name, count }: Model) {
           objectFit="contain"
           onClick={() => setShowDetail(true)}
         />
+        <div
+          className={`${themeValues[theme]?.bg} w-1/2 h-[200%] absolute rounded-lg transition-opacity opacity-0 group-hover:opacity-100 duration-1000 group-hover:animate-rotate invisible group-hover:visible`}></div>
+        <div className={`bg-13 w-[98%] h-[98%] absolute rounded-lg transition duration-300`}></div>
         <span className="little-logo font-medium">{details.name}</span>
       </div>
       <div

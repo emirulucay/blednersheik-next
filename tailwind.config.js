@@ -3,6 +3,21 @@ module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        rotate: "spin 5s linear infinite",
+        zoom: "zoom-in-out 4s ease-in infinite",
+      },
+      keyframes: {
+        spin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "zoom-in-out": {
+          "0%": { transform: "scale(1)" },
+          50: { transform: "scale(1.1)" },
+          100: { transform: "scale(1)" },
+        },
+      },
       colors: {
         a2: "#2A2A2A",
         "3a": "#3a3a3a",
