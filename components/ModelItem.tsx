@@ -77,7 +77,7 @@ export default function ModelItem({ name, count }: Model) {
       {/* sayfada görünen resim */}
       <div
         className="relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
-        model-content sm:w-[30vw] sm:h-[30vw] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[325px] xl:h-[325px] group overflow-hidden">
+        model-content sm:w-[30vw] sm:h-[30vw] md:w-[30vwpx] md:h-[30vwpx] lg:w-[22vw] lg:h-[22vw] xl:w-[22vw] xl:h-[22vw] 2xl:w-[19vw] 2xl:h-[19vw] p-4 group overflow-hidden">
         <Image
           className="z-10 inline-block transition-all duration-500 group-hover:animate-zoom"
           src={`/models/${name}/${name}-1.png`}
@@ -89,7 +89,7 @@ export default function ModelItem({ name, count }: Model) {
           onClick={() => setShowDetail(true)}
         />
         <div
-          className={`${themeValues[theme]?.bg} w-1/2 h-[200%] absolute rounded-lg transition-opacity opacity-0 group-hover:opacity-100 duration-1000 group-hover:animate-rotate invisible group-hover:visible`}></div>
+          className={`${themeValues[theme]?.bg} w-1/2 h-[200%] absolute transition-opacity opacity-0 group-hover:opacity-100 duration-1000 group-hover:animate-rotate invisible group-hover:visible`}></div>
         <div className={`bg-13 w-[98%] h-[98%] absolute rounded-lg transition duration-300`}></div>
         <span className="little-logo font-medium">{details.name}</span>
       </div>

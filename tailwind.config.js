@@ -37,7 +37,8 @@ module.exports = {
       container: {
         padding: {
           "2xl": "200px",
-          xl: "120px",
+          xl: "80px",
+          lg: "3%",
         },
         screens: {
           sm: "600px",

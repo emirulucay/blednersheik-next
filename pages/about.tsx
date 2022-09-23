@@ -13,7 +13,7 @@ export default function About() {
         <title>blendersheik — About</title>
       </Head>
       <Layout>
-        <div className="container mx-auto flex justify-between items-center mt-24 md:mt-40 flex-wrap-reverse">
+        <div className="container mx-auto min-h-[80vh] pt-32 flex justify-between items-center flex-wrap-reverse">
           <div className="w-full md:w-1/2 flex flex-col gap-8 justify-center items-center content-center">
             <p className="text-md !line-p font-inter font-medium text-87 lg:text-lg tracking-tight">
               Hey it's Yahya! I'm 18 years old from Turkey and a visual communication design student. I love creating 3D designs, models,

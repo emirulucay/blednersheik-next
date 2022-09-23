@@ -30,7 +30,7 @@ export default function Contact() {
         <title>blendersheik — Contact</title>
       </Head>
       <Layout>
-        <div className="container mx-auto flex gap-8 mt-40 flex-wrap-reverse">
+        <div className="container mx-auto min-h-[80vh] flex pt-40 gap-8 flex-wrap-reverse">
           <div className="flex flex-col md:w-1/2 gap-8 w-full mt-12 md:mt-0">
             <h5 className="font-inter font-bold text-2xl text-white tracking-tight">Send Me a Message</h5>
             <form noValidate className="flex flex-col gap-8" onSubmit={handleSubmit}>
