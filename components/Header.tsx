@@ -13,11 +13,11 @@ export default function Header() {
 
   return (
     <div>
-      <header className="fixed overflow-visible top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-100 flex items-center">
+      <header className="fixed overflow-visible top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:z-100 before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-100 before:z-100 flex items-center">
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(
-            "z-20 w-6 absolute left-6 top-1/2 md:hidden text-gray-100 -translate-y-1/2 flex items-center justify-center flex-col gap-3 cursor-pointer p-2",
+            "z-50 w-6 absolute left-6 top-1/2 md:hidden text-gray-100 -translate-y-1/2 flex items-center justify-center flex-col gap-3 cursor-pointer p-2",
             { "!gap-0": burgerOpen }
           )}>
           <span className={classNames("w-6 h-[1px] bg-white block transition-all duration-100", { "rotate-45": burgerOpen })}></span>
@@ -86,7 +86,7 @@ export default function Header() {
           </div>
           <ul
             className={classNames(
-              "w-full h-[100vh] flex md:hidden fixed top-[61px] left-0 flex-col bg-09 gap-8 px-6 py-6 transition duration-300",
+              "w-full h-[100vh] flex md:hidden fixed top-[61px] left-0 flex-col bg-09 gap-8 px-6 py-6 transition duration-300 z-50",
               {
                 "-translate-x-full invisible opacity-0": !burgerOpen,
               }
