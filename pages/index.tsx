@@ -23,7 +23,7 @@ export default function Home() {
         <div className="mt-8 flex flex-col gap-4 min-h-[90vh] items-center font-inter w-full container py-16 md:py-24 lg:py-32">
           <h1 className="text-white text-4xl  md:text-6xl font-extrabold -tracking-[0.03em]">The Blender Sheik</h1>
           <p className="text-center text-lg md:text-xl text-white/[.75]">
-            Hey, it’s Yahya. 20 years old graphical design student in
+            Hey, it’s Yahya. 19 years old graphical design student in
             <br />
             Turkey. These are my works. So enjoy...
           </p>
