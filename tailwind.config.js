@@ -22,7 +22,7 @@ module.exports = {
       colors: {
         a2: "#2A2A2A",
         "3a": "#3a3a3a",
-        darkbg: "#0D0D0F",
+        darkbg: "#0D0D0D",
         "09": "#0c0c0c",
         87: "#878787",
         bgPurple: "#8D64FF",
