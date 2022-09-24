@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <Layout>
         {/* hero section */}
-        <div className="mt-8 flex flex-col gap-4 min-h-[90vh] items-center font-inter w-full container py-12 md:py-24 lg:py-32">
+        <div className="mt-8 flex flex-col gap-4 min-h-[90vh] items-center font-inter w-full container py-16 md:py-24 lg:py-32">
           <h1 className="text-white text-4xl  md:text-6xl font-extrabold -tracking-[0.03em]">The Blender Sheik</h1>
           <p className="text-center text-lg md:text-xl text-white/[.75]">
             Hey, it’s Yahya. 20 years old graphical design student in
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
         </div>
         {/* journey section */}
-        <div className="bg-0a flex flex-col gap-12 py-12 md:py-24 lg:py-32" ref={heroRef}>
+        <div className="bg-0a flex flex-col gap-12 py-16 md:py-24 lg:py-32" ref={heroRef}>
           <div className="container flex flex-col gap-4">
             <h2 className="text-white text-2xl md:text-3xl font-bold font-inter tracking-tight">My Journey Is Started In 2020.</h2>
             <p className="text-white/[.65] font-medium font-inter text-md md:text-lg leading-[1.55] w-full lg:w-[900px]">
@@ -79,7 +79,7 @@ export default function Home() {
           </div>
         </div>
         {/* some models div */}
-        <div className="py-12 md:py-24 lg:py-32 flex flex-col gap-4 container">
+        <div className="py-16 md:py-24 lg:py-32 flex flex-col gap-4 container">
           <div className="pl-6 md:pl-0 flex flex-col">
             <h3 className="font-inter font-bold text-2xl text-white tracking-tight">Some Models</h3>
             <div className="w-20">
