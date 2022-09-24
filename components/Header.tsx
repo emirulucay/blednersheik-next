@@ -86,7 +86,7 @@ export default function Header() {
           </div>
           <ul
             className={classNames(
-              "w-full h-[100vh] flex md:hidden fixed top-[61px] left-0 flex-col bg-09 gap-8 px-6 py-6 transition duration-300 z-50",
+              "w-full h-[100vh] flex md:hidden fixed top-[60px] left-0 flex-col bg-09 gap-8 px-6 py-6 transition duration-300 z-50",
               {
                 "-translate-x-full invisible opacity-0": !burgerOpen,
               }
@@ -97,7 +97,7 @@ export default function Header() {
                   className={classNames(
                     "text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl",
                     {
-                      "!text-white": router.pathname == "/models",
+                      "!text-white": router.pathname == "/",
                     }
                   )}>
                   Home
