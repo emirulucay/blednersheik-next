@@ -33,3 +33,16 @@ export const models:Model[] = [{
   count: 2
 },
 ]
+
+export const homeModels:Model[] = [{
+  name: 'buzz-light-year',
+  count: 4
+},
+{
+  name:'piston-cup',
+  count: 4
+},
+{
+  name:'toy-dog',
+  count: 1
+},]

@@ -7,6 +7,7 @@ import Link from "next/link";
 import Layout from "components/Layout";
 import { useState, useRef } from "react";
 import { MainContext, useContext } from "../context";
+import { homeModels } from "data/models";
 
 export default function Home() {
   const { theme, themeValues } = useContext(MainContext);
@@ -88,10 +89,12 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="flex justify-center gap-4 md:justify-between items-center">
-            <ModelItem name="buzz-light-year" count={4} />
-            <ModelItem name="piston-cup" count={4} />
-            <ModelItem name="toy-dog" count={1} />
+          <div className="flex flex-col sm:flex-row sm:flex-wrap">
+            {homeModels.map((model, index) => (
+              <div key={index} className="w-full sm:w-1/2 lg:w-1/3">
+                <ModelItem name={model.name} key={index} count={model.count} />
+              </div>
+            ))}
           </div>
         </div>
       </Layout>
