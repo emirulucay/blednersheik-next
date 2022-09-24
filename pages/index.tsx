@@ -80,7 +80,7 @@ export default function Home() {
         </div>
         {/* some models div */}
         <div className="py-16 md:py-24 lg:py-32 flex flex-col gap-6 container">
-          <div className="pl-6 md:pl-0 flex flex-col">
+          <div className="flex flex-col">
             <h3 className="font-inter font-bold text-2xl md:text-3xl text-white tracking-tight">Some Models In My Collection</h3>
             <div className="float-left">
               <Link href="/models">
