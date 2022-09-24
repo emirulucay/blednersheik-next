@@ -55,9 +55,10 @@ export default function Home() {
         <div className="bg-0a flex flex-col gap-12 py-32" ref={heroRef}>
           <div className="container block relative">
             <Image
+              className="rounded-xl"
               src="/images/myroom-2.png"
               width={1920}
-              height={1080}
+              height={1200}
               layout="responsive"
               priority
               quality={100}
