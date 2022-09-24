@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { MainContext } from "context";
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState<number>(1);
+  const [theme, setTheme] = useState<number>(0);
   useEffect(() => {
     setTheme(+localStorage.getItem("theme") || 1);
   }, []);

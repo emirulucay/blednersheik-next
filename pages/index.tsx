@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import "simple-reveal/index.css";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import ModelItem from "components/ModelItem";
@@ -8,14 +7,8 @@ import Link from "next/link";
 import Layout from "components/Layout";
 import { useState, useRef } from "react";
 import { MainContext, useContext } from "../context";
-import { useSimpleReveal } from "simple-reveal";
 
 export default function Home() {
-  const { ref, cn, style } = useSimpleReveal({
-    duration: 800,
-    delay: 100,
-    initialTransform: "translateY(-1rem)",
-  });
   const { theme, themeValues } = useContext(MainContext);
   const heroRef = useRef(null);
 
@@ -28,9 +21,7 @@ export default function Home() {
       <Layout>
         {/* hero section */}
         <div className="mt-8 flex flex-col gap-4 min-h-[90vh] items-center font-inter w-full container py-16 md:py-24 lg:py-32">
-          <h1 ref={ref} className={cn("title text-white text-4xl  md:text-6xl font-extrabold -tracking-[0.03em]")} style={style}>
-            The Blender Sheik
-          </h1>
+          <h1 className="text-white text-4xl  md:text-6xl font-extrabold -tracking-[0.03em]">The Blender Sheik</h1>
           <p className="text-center text-lg md:text-xl text-white/[.75]">
             Hey, it’s Yahya. 20 years old graphical design student in
             <br />
@@ -93,7 +84,7 @@ export default function Home() {
             <h3 className="font-inter font-bold text-2xl md:text-3xl text-white tracking-tight">Some Models In My Collection</h3>
             <div className="float-left">
               <Link href="/models">
-                <a className={`${themeValues[theme].link} float-left text-md font-medium font-inter flex`}>See All</a>
+                <a className={`${themeValues[theme]?.link} float-left text-md font-medium font-inter flex`}>See All</a>
               </Link>
             </div>
           </div>
