@@ -13,6 +13,10 @@
     list-style: none;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 
   ::-webkit-scrollbar {
     width: 14px;
@@ -38,6 +42,7 @@
     font-family: 'Inter', sans-serif;
     font-stlye: normal;
     -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -64,7 +69,7 @@
   }
 
   .spaceLogo {
-    background: linear-gradient(90deg, #6F97FF 0%, #806BFF 59.9%, #8D64FF 100%);
+    background: linear-gradient(90deg, #779DFF 0%, #826DFF 59.9%, #916AFF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -100,11 +105,26 @@
     border-radius: 4px;
     cursor: pointer;
     padding: 8px 14px;
+    font-weight: 500;
     color: rgba(255, 255, 255, 1);
     transition: 0.2s all;
   }
 
   .button-sm:hover {
+    color: rgba(255, 255, 255, 0.8);
+
+  }
+
+  .button-md {
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 9px 24px;
+    color: rgba(255, 255, 255, 1);
+    transition: 0.2s all;
+  }
+
+  .button-md:hover {
     color: rgba(255, 255, 255, 0.8);
 
   }
@@ -119,18 +139,17 @@
     position: absolute;
     bottom: 16px;
     right: 16px;
-    letter-spacing: -0.01em;
-    color: rgba(255, 255, 255, 1);
-    font-size: 12px;
+    color: rgba(255, 255, 255, .7);
+    font-size: 11px;
     transition: .2s all;
     transition-delay: .1s;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .model-content:hover .little-logo {
     transition-delay: 0.3s;
     visibiliy: visible;
-    opacity: .8;
+    opacity: 1;
 
   }
 }

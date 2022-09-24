@@ -33,8 +33,10 @@ module.exports = {
         greenSelection: "#2ECC9F",
         westSelection: "#C57E2E",
         spaceSelection: "#8B65FF",
+        "0a": "#0A0A0A",
       },
       container: {
+        center: true,
         padding: {
           "2xl": "200px",
           xl: "80px",
