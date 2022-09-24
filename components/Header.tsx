@@ -92,6 +92,19 @@ export default function Header() {
               }
             )}>
             <li>
+              <Link href="/">
+                <a
+                  className={classNames(
+                    "text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl",
+                    {
+                      "!text-white": router.pathname == "/models",
+                    }
+                  )}>
+                  Home
+                </a>
+              </Link>
+            </li>
+            <li>
               <Link href="/models">
                 <a
                   className={classNames(
