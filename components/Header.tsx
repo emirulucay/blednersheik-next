@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="fixed overflow-visible top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-50 flex items-center">
+      <header className="fixed overflow-visible top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-50 flex justify-between items-center">
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(
@@ -26,7 +26,7 @@ export default function Header() {
               "-rotate-45 -translate-y-[1px]": burgerOpen,
             })}></span>
         </div>
-        <div className="relative container mx-auto flex justify-center md:justify-center items-center h-[66px]">
+        <div className="relative w-full container flex justify-center md:justify-between items-center h-[66px]">
           <h1>
             <Link href="/">
               <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-2xl select-none`}>blendersheik</a>

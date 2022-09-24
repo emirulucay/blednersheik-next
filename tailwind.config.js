@@ -39,20 +39,35 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: {
-          "2xl": "200px",
-          xl: "80px",
-          lg: "3%",
-        },
-        screens: {
-          sm: "600px",
-          md: "728px",
-          lg: "984px",
-          xl: "1240px",
-          "2xl": "1496px",
-        },
+        // screens: {
+        //   sm: "600px",
+        //   md: "728px",
+        //   lg: "984px",
+        //   xl: "1240px",
+        //   "2xl": "1496px",
+        // },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".container": {
+          maxWidth: "100%",
+          "@screen sm": {
+            maxWidth: "600px",
+          },
+          "@screen md": {
+            maxWidth: "768px",
+          },
+          "@screen lg": {
+            maxWidth: "1024px",
+          },
+          "@screen xl": {
+            maxWidth: "1200px",
+          },
+        },
+      });
+    },
+  ],
 };

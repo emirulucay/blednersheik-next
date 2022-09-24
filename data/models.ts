@@ -25,7 +25,7 @@ export const models:Model[] = [{
   count: 1
 },
 {
-  name:'L-seat',
+  name:'l-seat',
   count: 1
 },
 {

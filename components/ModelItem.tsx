@@ -73,21 +73,25 @@ export default function ModelItem({ name, count }: Model) {
   const { themeValues, theme } = useContext(MainContext);
 
   return (
-    <div className={`mx-auto md:mx-0 inline-block cursor-pointer group relative`}>
+    <div className={`sm:mx-0 cursor-pointer group relative aspect-square w-full h-full`}>
       {/* sayfada görünen resim */}
       <div
         className="relative flex items-center justify-center rounded-lg transition-all duration-300
-        model-content sm:w-full sm:h-auto md:w-[30vwpx] md:h-[30vwpx] lg:w-[22vw] lg:h-[22vw] xl:w-[22vw] xl:h-[22vw] 2xl:w-[19vw] 2xl:h-[19vw] p-4 group overflow-hidden">
-        <Image
-          className="z-10 inline-block transition-all duration-500 group-hover:animate-zoom"
-          src={`/models/${name}/${name}-1.png`}
-          alt={details.name}
-          width="280%"
-          height="280%"
-          layout="intrinsic"
-          objectFit="contain"
-          onClick={() => setShowDetail(true)}
-        />
+        model-content w-full md:w-full aspect-square group overflow-hidden">
+        <div className="block w-full h-full p-8">
+          <Image
+            className="z-10 block transition-all duration-500 group-hover:animate-zoom"
+            src={`/models/${name}/${name}-1.png`}
+            alt={details.name}
+            width="100%"
+            height="100%"
+            quality={100}
+            priority
+            layout="responsive"
+            objectFit="contain"
+            onClick={() => setShowDetail(true)}
+          />
+        </div>
         <div
           className={`${themeValues[theme]?.bg} w-2/3 h-[200%] absolute transition-opacity opacity-0 duration-1000 group-hover:animate-rotate invisible group-hover:visible hover:backdrop-blur-md`}></div>
         <div className={`bg-18 w-[98%] h-[98%] absolute rounded-lg transition duration-300`}></div>

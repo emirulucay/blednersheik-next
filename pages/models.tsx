@@ -11,12 +11,16 @@ export default function Models() {
         <title>blendersheik — Models</title>
       </Head>
       <Layout>
-        <div className="mt-40 container px-6">
-          <div className="mx-auto md:mx-0">
-            <h3 className="font-inter text-bold tracking-tight text-white font-bold text-2xl">My Model Collection</h3>
-            <div className="flex gap-2 md:gap-4 lg:gap-8 flex-wrap mt-8 justify-center">
+        <div className="mt-32 md:mt-40 container px-6 md:px-0">
+          <div className="flex flex-col gap-6">
+            <h3 className="font-inter text-bold tracking-tight text-white font-bold text-2xl md:text-3xl lg:text-4xl">
+              My Model Collection
+            </h3>
+            <div className="flex flex-col sm:flex-row sm:flex-wrap">
               {models.map((model, index) => (
-                <ModelItem name={model.name} key={index} count={model.count} />
+                <div className="w-full sm:w-1/2 lg:w-1/3">
+                  <ModelItem name={model.name} key={index} count={model.count} />
+                </div>
               ))}
             </div>
           </div>

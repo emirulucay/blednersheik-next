@@ -2446,6 +2446,11 @@
     "get-intrinsic" "^1.0.2"
     "object-inspect" "^1.9.0"
 
+"simple-reveal@^0.6.0":
+  "integrity" "sha512-Iaf3A3nT4XdNvNwTvL0qVayeqI370UCjHe3InVVt0gBE9f1tC/yqrDwxMIJrtNIfAYHSIyobiRoGwagRoDOaXg=="
+  "resolved" "https://registry.npmjs.org/simple-reveal/-/simple-reveal-0.6.0.tgz"
+  "version" "0.6.0"
+
 "slash@^3.0.0":
   "integrity" "sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q=="
   "resolved" "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
