@@ -4,13 +4,14 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        rotate: "spin 5s linear infinite",
+        rotate: "spin 2s linear 1",
         zoom: "zoom-in-out 4s ease-in infinite",
       },
       keyframes: {
         spin: {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
+          "0%": { transform: "rotate(0deg); opacity: 1;" },
+          "99%": { transform: "rotate(180deg); opacity: 0;" },
+          "100%": { transform: "rotate(180); opacity: 0;" },
         },
         "zoom-in-out": {
           "0%": { transform: "scale(1)" },
@@ -34,6 +35,7 @@ module.exports = {
         westSelection: "#C57E2E",
         spaceSelection: "#8B65FF",
         "0a": "#0A0A0A",
+        18: "#181818",
       },
       container: {
         center: true,

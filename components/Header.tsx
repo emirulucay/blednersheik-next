@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="fixed overflow-visible top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:z-100 before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-100 before:z-100 flex items-center">
+      <header className="fixed overflow-visible top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-50 flex items-center">
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(

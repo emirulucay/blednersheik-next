@@ -79,16 +79,16 @@ export default function Home() {
           </div>
         </div>
         {/* some models div */}
-        <div className="py-16 md:py-24 lg:py-32 flex flex-col gap-4 container">
+        <div className="py-16 md:py-24 lg:py-32 flex flex-col gap-6 container">
           <div className="pl-6 md:pl-0 flex flex-col">
-            <h3 className="font-inter font-bold text-2xl text-white tracking-tight">Some Models</h3>
-            <div className="w-20">
+            <h3 className="font-inter font-bold text-2xl md:text-3xl text-white tracking-tight">Some Models In My Collection</h3>
+            <div className="float-left">
               <Link href="/models">
-                <a className={`${themeValues[theme].link} font-medium font-inter flex`}>See all</a>
+                <a className={`${themeValues[theme].link} float-left text-md font-medium font-inter flex`}>See All</a>
               </Link>
             </div>
           </div>
-          <div className="flex justify-center gap-4 md:justify-between items-center flex-wrap md:flex-nowrap">
+          <div className="flex justify-center gap-4 md:justify-between items-center">
             <ModelItem name="buzz-light-year" count={4} />
             <ModelItem name="piston-cup" count={4} />
             <ModelItem name="toy-dog" count={1} />

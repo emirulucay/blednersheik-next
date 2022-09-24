@@ -76,8 +76,8 @@ export default function ModelItem({ name, count }: Model) {
     <div className={`mx-auto md:mx-0 inline-block cursor-pointer group relative`}>
       {/* sayfada görünen resim */}
       <div
-        className="relative flex items-center justify-center rounded-lg transition-all duration-300 border-[1px] border-white/[0.15]
-        model-content sm:w-[30vw] sm:h-[30vw] md:w-[30vwpx] md:h-[30vwpx] lg:w-[22vw] lg:h-[22vw] xl:w-[22vw] xl:h-[22vw] 2xl:w-[19vw] 2xl:h-[19vw] p-4 group overflow-hidden">
+        className="relative flex items-center justify-center rounded-lg transition-all duration-300
+        model-content sm:w-full sm:h-auto md:w-[30vwpx] md:h-[30vwpx] lg:w-[22vw] lg:h-[22vw] xl:w-[22vw] xl:h-[22vw] 2xl:w-[19vw] 2xl:h-[19vw] p-4 group overflow-hidden">
         <Image
           className="z-10 inline-block transition-all duration-500 group-hover:animate-zoom"
           src={`/models/${name}/${name}-1.png`}
@@ -89,8 +89,8 @@ export default function ModelItem({ name, count }: Model) {
           onClick={() => setShowDetail(true)}
         />
         <div
-          className={`${themeValues[theme]?.bg} w-1/2 h-[200%] absolute transition-opacity opacity-0 group-hover:opacity-100 duration-1000 group-hover:animate-rotate invisible group-hover:visible`}></div>
-        <div className={`bg-13 w-[98%] h-[98%] absolute rounded-lg transition duration-300`}></div>
+          className={`${themeValues[theme]?.bg} w-2/3 h-[200%] absolute transition-opacity opacity-0 duration-1000 group-hover:animate-rotate invisible group-hover:visible hover:backdrop-blur-md`}></div>
+        <div className={`bg-18 w-[98%] h-[98%] absolute rounded-lg transition duration-300`}></div>
         <span className="little-logo font-thin">{details.name}</span>
       </div>
       <div
@@ -114,7 +114,7 @@ export default function ModelItem({ name, count }: Model) {
             "hidden invisible": count < 2,
           })}>
           <div
-            className="bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 z-40 p-2 select-none cursor-pointer"
+            className="bg-13/[0.6] rounded-lg transition-all duration-300 z-40 p-2 select-none cursor-pointer"
             onClick={() => handleImage("image2")}>
             <Image src={selectedImg.otherImages[0]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
           </div>
@@ -140,7 +140,7 @@ export default function ModelItem({ name, count }: Model) {
           </div>
         </div>
         {/* clicked büyük image */}
-        <div className="bg-13/[0.6] border-[1px] px-4 border-white/[0.15] rounded-lg transition duration-300 shadow z-40 flex items-center justify-center">
+        <div className="bg-13/[0.6]  rounded-lg transition duration-300 shadow z-40 flex items-center justify-center">
           <Image
             className={classNames("z-20 sm:w-full sm:h ", { "!hidden": !showDetail })}
             src={selectedImg.selected}
