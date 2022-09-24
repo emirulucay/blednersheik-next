@@ -55,7 +55,7 @@ export default function Home() {
         <div className="bg-0a flex flex-col gap-12 py-12 md:py-24 lg:py-32" ref={heroRef}>
           <div className="container flex flex-col gap-4">
             <h2 className="text-white text-2xl md:text-3xl font-bold font-inter tracking-tight">My Journey Is Started In 2020.</h2>
-            <p className="text-white/[.65] font-medium font-inter text-lg leading-[1.55] w-full lg:w-[900px]">
+            <p className="text-white/[.65] font-medium font-inter text-md md:text-lg leading-[1.55] w-full lg:w-[900px]">
               I’m started blender in COVID-19 process. I’m fully stayed home and improved to design 3d models. I’m sharing my newest designs
               with this website. But if you wanna see my{" "}
               <Link href="oldests">
