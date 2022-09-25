@@ -32,8 +32,8 @@ export default function Contact() {
       <Layout>
         <div className="container mx-auto min-h-[80vh] flex pt-40 gap-8 flex-wrap-reverse">
           <div className="flex flex-col md:w-1/2 gap-8 w-full mt-12 md:mt-0">
-            <h5 className="font-inter font-bold text-2xl text-white tracking-tight">Send Me a Message</h5>
-            <form noValidate className="flex flex-col gap-8" onSubmit={handleSubmit}>
+            <h5 className="font-inter font-bold text-2xl md:text-3xl lg:text-4xl text-white tracking-tight">Send Me a Message</h5>
+            <form noValidate className="flex flex-col gap-8 mt-2" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-2">
                 <label className="text-gray-200 font-inter font-semibold tracking-tight leading-none" htmlFor="namee">
                   Name
@@ -87,11 +87,11 @@ export default function Contact() {
             </form>
           </div>
           <div className="flex flex-col gap-8 md:w-1/3 w-full">
-            <h3 className="text-white font-inter font-bold text-2xl tracking-tight">Social Media</h3>
-            <div className="flex gap-4 justify-start items-center">
+            <h3 className="text-white font-inter font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight">Social Media</h3>
+            <div className="flex gap-4 justify-start items-center mt-2">
               <FaLinkedin className="text-white text-5xl " />
               <div className="flex flex-col gap-1">
-                <h2 className="text-gray-300 text-lg font-semibold leading-none font-inter">Yahya Apaydın</h2>
+                <h2 className="text-gray-200 text-lg font-medium leading-none font-inter">Yahya Apaydın</h2>
                 <a
                   href="https://twitter.com"
                   target="_blank"
@@ -104,7 +104,7 @@ export default function Contact() {
             <div className="flex gap-4">
               <FaTwitter className="text-white text-5xl -translate-y-1" />
               <div className="flex flex-col gap-1">
-                <h2 className="text-gray-300 text-lg font-semibold leading-none font-inter">blednersheik</h2>
+                <h2 className="text-gray-200 text-lg font-medium leading-none font-inter">blendersheik</h2>
                 <a
                   href="https://twitter.com"
                   target="_blank"
@@ -117,7 +117,7 @@ export default function Contact() {
             <div className="flex gap-4">
               <FaInstagram className="text-white text-5xl -translate-y-1" />
               <div className="flex flex-col gap-1">
-                <h2 className="text-gray-300 text-lg font-semibold leading-none font-inter">blednersheik</h2>
+                <h2 className="text-gray-200 text-lg font-medium leading-none font-inter">blendersheik</h2>
                 <a
                   href="https://instagram.com/blendersheik"
                   target="_blank"

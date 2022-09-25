@@ -25,7 +25,19 @@ export const models:Model[] = [{
   count: 4
 },
 {
+  name:'pringles-collection',
+  count: 1
+},
+{
   name:'armchair',
+  count: 1
+},
+{
+  name:'milano',
+  count: 2
+},
+{
+  name:'seat',
   count: 1
 },
 {
@@ -33,8 +45,16 @@ export const models:Model[] = [{
   count: 1
 },
 {
+  name:'sofa',
+  count: 1
+},
+{
   name:'scot',
   count: 2
+},
+{
+  name:'gas-light',
+  count: 1
 },
 
 ]

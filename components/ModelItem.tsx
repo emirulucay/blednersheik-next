@@ -42,31 +42,30 @@ export default function ModelItem({ name, count }: Model) {
       `/models/${name}/${name}-3.png`,
       `/models/${name}/${name}-4.png`,
     ];
-    switch (image) {
-      case "image4":
-        newImage = otherImages[2];
-        newArray = fullArray.filter((item) => item !== newImage);
-        setSelectedImg({
-          selected: newImage,
-          otherImages: newArray,
-        });
-        break;
-      case "image3":
-        newImage = otherImages[1];
-        newArray = fullArray.filter((item) => item !== newImage);
-        setSelectedImg({
-          selected: newImage,
-          otherImages: newArray,
-        });
-        break;
-      case "image2":
-        newImage = otherImages[0];
-        newArray = fullArray.filter((item) => item !== newImage);
-        setSelectedImg({
-          selected: newImage,
-          otherImages: newArray,
-        });
-        break;
+    if (image === "image4") {
+      newImage = otherImages[2];
+      newArray = fullArray.filter((item) => item !== newImage);
+      setSelectedImg({
+        selected: newImage,
+        otherImages: newArray,
+      });
+      return;
+    } else if (image === "image3") {
+      newImage = otherImages[1];
+      newArray = fullArray.filter((item) => item !== newImage);
+      setSelectedImg({
+        selected: newImage,
+        otherImages: newArray,
+      });
+      return;
+    } else if (image === "image2") {
+      newImage = otherImages[0];
+      newArray = fullArray.filter((item) => item !== newImage);
+      setSelectedImg({
+        selected: newImage,
+        otherImages: newArray,
+      });
+      return;
     }
   };
 
@@ -99,61 +98,131 @@ export default function ModelItem({ name, count }: Model) {
       </div>
       <div
         onClick={() => setShowDetail(false)}
-        className={classNames(
-          "fixed backdrop-blur-md top-0 left-0 w-full h-full z-20 transition-all duration-300 cursor-default select-none",
-          {
-            "!hidden": !showDetail,
-          }
-        )}></div>
+        className={classNames("fixed backdrop-blur-md top-0 left-0 w-full h-full z-20 cursor-default select-none", {
+          "!hidden": !showDetail,
+        })}></div>
       <div
         className={classNames(
-          "w-full md:w-auto px-2 fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2",
+          "w-full items-center md:items-start overflow-hidden md:w-[400px] lg:w-[700px] fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2",
           {
             hidden: !showDetail,
           }
         )}>
         {/* alttaki/yandaki resimler */}
         <div
-          className={classNames(" flex flex-row lg:flex-col gap-2 items-start cursor-default justifyt-start", {
-            "hidden invisible": count < 2,
+          className={classNames("flex flex-row lg:flex-col lg:w-1/4 w-full items-start cursor-default", {
+            "!hidden unvisible": count < 2,
           })}>
           <div
-            className="bg-13/[0.6] rounded-lg transition-all duration-300 z-40 p-2 select-none cursor-pointer"
+            className="bg-13/[0.6] rounded-lg border-[1px] w-full relative md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer"
             onClick={() => handleImage("image2")}>
-            <Image src={selectedImg.otherImages[0]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
+            <div className="block w-full aspect-square h-full">
+              {count > 1 ? (
+                <Image
+                  src={selectedImg.otherImages[0]}
+                  alt="item"
+                  width="100%"
+                  height="100%"
+                  quality={100}
+                  priority
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              ) : (
+                <Image
+                  src={selectedImg.otherImages[0]}
+                  alt="item"
+                  width="100%"
+                  height="100%"
+                  quality={100}
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              )}
+            </div>
           </div>
           <div
             className={classNames(
-              "p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 z-40 select-none cursor-pointer",
+              "bg-13/[0.6] rounded-lg border-[1px] relative w-20 md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
               {
-                "hidden invisible": count < 3,
+                "!hidden invisible": count < 3,
               }
             )}
             onClick={() => handleImage("image3")}>
-            <Image src={selectedImg.otherImages[1]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
+            <div className="block w-full aspect-square h-full">
+              {count > 2 ? (
+                <Image
+                  src={selectedImg.otherImages[1]}
+                  alt="item"
+                  width="100%"
+                  height="100%"
+                  quality={100}
+                  priority
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              ) : (
+                <Image
+                  src={selectedImg.otherImages[1]}
+                  alt="item"
+                  width="100%"
+                  height="100%"
+                  quality={100}
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              )}
+            </div>
           </div>
           <div
             className={classNames(
-              "p-2 bg-13/[0.6] border-[1px] border-white/[0.15] rounded-lg transition-all duration-300 shadow z-40 select-none cursor-pointer",
+              "bg-13/[0.6] rounded-lg border-[1px] relative w-20 md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
               {
-                "hidden invisible": count < 4,
+                "!hidden invisible": count < 4,
               }
             )}
             onClick={() => handleImage("image4")}>
-            <Image src={selectedImg.otherImages[2]} alt="item" width="150%" height="150%" layout="intrinsic" objectFit="contain" />
+            <div className="block w-full h-full">
+              {count > 3 ? (
+                <Image
+                  src={selectedImg.otherImages[2]}
+                  alt="item"
+                  width="100%"
+                  height="100%"
+                  quality={100}
+                  priority
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              ) : (
+                <Image
+                  src={selectedImg.otherImages[2]}
+                  alt="item"
+                  width="100%"
+                  height="100%"
+                  quality={100}
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              )}
+            </div>
           </div>
         </div>
         {/* clicked büyük image */}
-        <div className="bg-13/[0.6]  rounded-lg transition duration-300 shadow z-40 flex items-center justify-center">
-          <Image
-            className={classNames("z-20 sm:w-full sm:h ", { "!hidden": !showDetail })}
-            src={selectedImg.selected}
-            alt={details.name}
-            width="400%"
-            height="400%"
-            layout="intrinsic"
-            objectFit="contain"
-          />
+        <div className="bg-13/[0.6] rounded-lg w-full lg:w-3/4 transition duration-300 aspect-square shadow z-40 flex items-center justtify-center">
+          <div className="block w-full aspect-square">
+            <Image
+              className={classNames("z-20", { "!hidden": !showDetail })}
+              src={selectedImg.selected}
+              alt={details.name}
+              width="100%"
+              height="100%"
+              priority
+              quality={100}
+              layout="responsive"
+              objectFit="contain"
+            />
+          </div>
         </div>
       </div>
     </div>

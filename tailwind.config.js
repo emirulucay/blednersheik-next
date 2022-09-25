@@ -56,7 +56,7 @@ module.exports = {
         ".container": {
           maxWidth: "100%",
           "@screen sm": {
-            maxWidth: "600px",
+            maxWidth: "632px",
           },
           "@screen md": {
             maxWidth: "768px",
@@ -65,7 +65,7 @@ module.exports = {
             maxWidth: "1024px",
           },
           "@screen xl": {
-            maxWidth: "1200px",
+            maxWidth: "1240px",
           },
         },
       });
