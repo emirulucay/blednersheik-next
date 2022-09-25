@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="fixed overflow-visible top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-50 flex justify-between items-center">
+      <header className="fixed top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-50 flex justify-between items-center">
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(
@@ -86,7 +86,7 @@ export default function Header() {
           </div>
           <ul
             className={classNames(
-              "w-full h-[100vh] flex md:hidden fixed top-[60px] left-0 flex-col bg-09 gap-8 px-6 py-6 transition duration-300 z-50",
+              "w-full h-[100vh] flex md:hidden fixed top-[60px] left-0 flex-col bg-09/[.99] backdrop-blur-sm gap-8 px-6 py-6 transition duration-300 z-50",
               {
                 "-translate-x-full invisible opacity-0": !burgerOpen,
               }

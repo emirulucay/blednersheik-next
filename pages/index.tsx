@@ -23,10 +23,8 @@ export default function Home() {
         {/* hero section */}
         <div className="mt-8 flex flex-col gap-4 min-h-[90vh] items-center font-inter w-full container py-16 md:py-24 lg:py-32">
           <h1 className="text-white text-4xl  md:text-6xl font-extrabold -tracking-[0.03em]">The Blender Sheik</h1>
-          <p className="text-center text-lg md:text-xl text-white/[.75]">
-            Hey, it’s Yahya. 19 years old graphical design student in
-            <br />
-            Turkey. These are my works. So enjoy...
+          <p className="text-center text-lg md:text-xl text-white/[.75] max-w-[522px]">
+            Hey, it’s Yahya. 19 years old graphical design student in Turkey. These are my works. So enjoy...
           </p>
           {/* buttons div */}
           <div className="flex items-center justify-center gap-6 mt-4">

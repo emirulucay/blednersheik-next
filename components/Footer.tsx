@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col items-center justify-center">
         <h4 className={`${themeValues[theme]?.logo} logo font-inter font-bold text-[24px] select-none`}>blendersheik</h4>
         <p className="font-inter font-medium text-gray-500">blendersheik © 2022. All rights reserved</p>
-        <p className="absolute bottom-3 text-center font-inter font-medium text-sm text-gray-600">
+        <p className="absolute bottom-4 text-center font-inter font-medium text-sm text-gray-600">
           created by{" "}
           <a
             className="text-gray-400 hover:text-white transition-all duration-200"

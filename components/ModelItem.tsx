@@ -95,7 +95,7 @@ export default function ModelItem({ name, count }: Model) {
         <div
           className={`${themeValues[theme]?.bg} w-2/3 h-[200%] absolute transition-opacity opacity-0 duration-1000 group-hover:animate-rotate invisible group-hover:visible hover:backdrop-blur-md`}></div>
         <div className={`bg-18 w-[98%] h-[98%] absolute rounded-lg transition duration-300`}></div>
-        <span className="little-logo font-thin">{details.name}</span>
+        {/* <span className="little-logo font-thin">{details.name}</span> */}
       </div>
       <div
         onClick={() => setShowDetail(false)}

@@ -26,7 +26,7 @@ export default function ThemeChanger() {
               localStorage.setItem("theme", "1");
             }}>
             <div className="w-4 h-4 greenBg rounded-full"></div>
-            Modern Green
+            Alien Green
           </li>
           <li
             className="text-white/[0.7] tracking-tight font-medium w-full flex items-center gap-2 p-3 hover:bg-a2/[0.6] rounded-lg cursor-pointer hover:text-white"
@@ -36,7 +36,7 @@ export default function ThemeChanger() {
               localStorage.setItem("theme", "2");
             }}>
             <div className="w-4 h-4 spaceBg rounded-full"></div>
-            Space Blue
+            Glacier Blue
           </li>
           <li
             className="text-white/[0.7] tracking-tight font-medium w-full flex items-center gap-2 p-3 hover:bg-a2/[0.6] rounded-lg cursor-pointer hover:text-white"

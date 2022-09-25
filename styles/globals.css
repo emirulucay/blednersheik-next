@@ -138,9 +138,9 @@
     opacity: 0;
     position: absolute;
     bottom: 16px;
-    right: 16px;
-    color: rgba(255, 255, 255, .7);
-    font-size: 11px;
+    left: 16px;
+    color: rgba(255, 255, 255, 85);
+    font-size: 12px;
     transition: .2s all;
     transition-delay: .1s;
     font-weight: 400;

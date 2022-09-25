@@ -2,6 +2,10 @@ import { Model } from "types/types"
 
 export const models:Model[] = [{
   name: 'buzz-light-year',
+  count: 3
+},
+{
+  name:'buzz-dark-year',
   count: 4
 },
 {
@@ -32,6 +36,7 @@ export const models:Model[] = [{
   name:'scot',
   count: 2
 },
+
 ]
 
 export const homeModels:Model[] = [{
