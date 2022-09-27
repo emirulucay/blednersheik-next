@@ -96,11 +96,13 @@ export default function ModelItem({ name, count }: Model) {
         <div className={`bg-18 w-[98%] h-[98%] absolute rounded-lg transition duration-300`}></div>
         {/* <span className="little-logo font-thin">{details.name}</span> */}
       </div>
+      {/* arka planı bulanıklaştıran division */}
       <div
         onClick={() => setShowDetail(false)}
         className={classNames("fixed backdrop-blur-md top-0 left-0 w-full h-full z-20 cursor-default select-none", {
           "!hidden": !showDetail,
         })}></div>
+      {/* click olduğunda açılan bölümleri kapsayan root div */}
       <div
         className={classNames(
           "w-full items-center md:items-start overflow-hidden md:w-[400px] lg:w-[700px] fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2",
@@ -108,9 +110,9 @@ export default function ModelItem({ name, count }: Model) {
             hidden: !showDetail,
           }
         )}>
-        {/* alttaki/yandaki resimler */}
+        {/* duruma göre solda veya yukarıda çıkan diğer açılardan resimler */}
         <div
-          className={classNames("flex flex-row lg:flex-col lg:w-1/4 w-full items-start cursor-default", {
+          className={classNames("flex flex-row lg:flex-col w-2/3 justify-start lg:w-1/4 items-start cursor-default", {
             "!hidden unvisible": count < 2,
           })}>
           <div
@@ -143,7 +145,7 @@ export default function ModelItem({ name, count }: Model) {
           </div>
           <div
             className={classNames(
-              "bg-13/[0.6] rounded-lg border-[1px] relative w-20 md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
+              "bg-13/[0.6] rounded-lg border-[1px] relative w-full md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
               {
                 "!hidden invisible": count < 3,
               }
@@ -176,7 +178,7 @@ export default function ModelItem({ name, count }: Model) {
           </div>
           <div
             className={classNames(
-              "bg-13/[0.6] rounded-lg border-[1px] relative w-20 md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
+              "bg-13/[0.6] rounded-lg border-[1px] relative w-full md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
               {
                 "!hidden invisible": count < 4,
               }
@@ -208,8 +210,8 @@ export default function ModelItem({ name, count }: Model) {
             </div>
           </div>
         </div>
-        {/* clicked büyük image */}
-        <div className="bg-13/[0.6] rounded-lg w-full lg:w-3/4 transition duration-300 aspect-square shadow z-40 flex items-center justtify-center">
+        {/* tıklandığında açılan büyük resim */}
+        <div className="bg-13/[0.6] rounded-lg w-2/3 lg:w-3/4 transition duration-300 aspect-square shadow z-40 flex items-center justtify-center">
           <div className="block w-full aspect-square">
             <Image
               className={classNames("z-20", { "!hidden": !showDetail })}
