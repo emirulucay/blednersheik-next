@@ -18,8 +18,9 @@ export default function ImageDetail({ width, height, src, details }: ImageDetail
           quality={100}
         />
       </div>
-      {details.map((detail) => (
+      {details.map((detail, index) => (
         <span
+          key={index}
           style={{ left: `${detail.left}`, top: `${detail.top}` }}
           className={`select-none absolute text-white py-2 flex items-center px-4 group-hover:opacity-100 opacity-0 transition-all duration-500 bg-13/[.7]
            border-[1px] border-white/[.15] rounded-lg`}>

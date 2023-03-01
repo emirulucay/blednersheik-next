@@ -17,7 +17,7 @@ export default function Models() {
             <div className="flex flex-col sm:flex-row sm:flex-wrap">
               {models.map((model, index) => (
                 <div key={index} className="w-full sm:w-1/2 lg:w-1/3">
-                  <ModelItem name={model.name} key={index} count={model.count} />
+                  <ModelItem name={model.name} count={model.count} />
                 </div>
               ))}
             </div>
