@@ -5,9 +5,10 @@ import Header from "components/Header";
 import ModelItem from "components/ModelItem";
 import Link from "next/link";
 import Layout from "components/Layout";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { MainContext, useContext } from "../context";
 import { homeModels } from "data/models";
+import cx from "classnames";
 
 export default function Home() {
   const { theme, themeValues } = useContext(MainContext);
@@ -36,15 +37,15 @@ export default function Home() {
             </Link>
           </div>
           {/* hero image */}
-          <div className="min-w-full w-full h-full block mt-12 rounded-lg">
+          <div className="min-w-full w-full h-full block mt-8 rounded-lg relative lg:px-16">
             <Image
               className="rounded-xl"
               src="/images/myroom-1.png"
               layout="responsive"
               priority
               quality={100}
-              width={1920}
-              height={1080}
+              width={2880}
+              height={1620}
               objectFit="contain"
               alt="My room"
             />
@@ -53,9 +54,9 @@ export default function Home() {
         {/* journey section */}
         <div className="bg-0a flex flex-col gap-12 py-16 md:py-24 lg:py-32" ref={heroRef}>
           <div className="container flex flex-col gap-4">
-            <h2 className="text-white text-2xl md:text-3xl font-bold font-inter tracking-tight">My Journey Is Started In 2020.</h2>
+            <h2 className="text-white text-2xl md:text-3xl font-bold font-inter tracking-tight">My Journey Started In 2020.</h2>
             <p className="text-white/[.65] font-medium font-inter text-md md:text-lg leading-[1.55] w-full lg:w-[900px]">
-              I’m started blender in COVID-19 process. I’m fully stayed home and improved to design 3d models. I’m sharing my newest designs
+              I started blender in COVID-19 process. I’m fully stayed home and improved to design 3d models. I’m sharing my newest designs
               with this website. But if you wanna see my{" "}
               <Link href="oldests">
                 <a className="border-b-[2px] border-white/[.45] transition-all duration-300 hover:border-white hover:text-white">designs</a>

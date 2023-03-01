@@ -4,19 +4,13 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        rotate: "spin 2s linear 1",
-        zoom: "zoom-in-out 4s ease-in infinite",
+        rotate: "spin 2s linear infinite",
       },
       keyframes: {
         spin: {
-          "0%": { transform: "rotate(0deg); opacity: 1;" },
-          "99%": { transform: "rotate(180deg); opacity: 0;" },
-          "100%": { transform: "rotate(180); opacity: 0;" },
-        },
-        "zoom-in-out": {
-          "0%": { transform: "scale(1)" },
-          50: { transform: "scale(1.1)" },
-          100: { transform: "scale(1)" },
+          "0%": { transform: "rotate(00deg); opacity: 1" },
+          "50%": { transform: "rotate(90deg); opacity: 0.5" },
+          "100%": { transform: "rotate(180deg); opacity: 1" },
         },
       },
       colors: {

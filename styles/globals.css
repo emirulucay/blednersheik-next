@@ -40,13 +40,13 @@
   body {
     background: #0D0D0F;
     font-family: 'Inter', sans-serif;
-    font-stlye: normal;
+    font-style: normal;
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
   }
 }
 
-@layer utilities {
+@layer components {
 
   .logo {
     letter-spacing: -0.03em;
@@ -64,6 +64,10 @@
     background: linear-gradient(90deg, #A59822 0%, #B87C23 46.87%, #C4622B 100%);
   }
 
+  .westBgShadow {
+    background: linear-gradient(180deg, #CCBC2E 0%, #E29A2D 46.87%, #FF943E 100%);
+  }
+
   .westLink {
     @apply text-westLink
   }
@@ -78,6 +82,10 @@
 
   .spaceBg {
     background: linear-gradient(90deg, #4564B5 0%, #4643CC 59.9%, #673FD7 100%);
+  }
+
+  .spaceBgShadow {
+    background: linear-gradient(180deg, #779DFF 0%, #826DFF 59.9%, #916AFF 100%);
   }
 
   .spaceLink {
@@ -99,6 +107,10 @@
 
   .greenLink {
     @apply text-greenLink
+  }
+
+  .greenBgShadow {
+    background: linear-gradient(180deg, #2ECC63 0%, #2ECC87 59.9%, #2ECCBC 100%);
   }
 
   .button-sm {

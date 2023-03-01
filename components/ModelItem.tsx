@@ -77,9 +77,9 @@ export default function ModelItem({ name, count }: Model) {
       <div
         className="relative flex items-center justify-center rounded-lg transition-all duration-300
         model-content w-full md:w-full aspect-square group overflow-hidden">
-        <div className="block w-full h-full p-8">
+        <div className="block w-full h-full p-6">
           <Image
-            className="z-10 block transition-all duration-500 group-hover:animate-zoom"
+            className="z-10 block transition-all duration-500"
             src={`/models/${name}/${name}-1.png`}
             alt={details.name}
             width="100%"
@@ -92,8 +92,8 @@ export default function ModelItem({ name, count }: Model) {
           />
         </div>
         <div
-          className={`${themeValues[theme]?.bg} w-2/3 h-[200%] absolute transition-opacity opacity-0 duration-1000 group-hover:animate-rotate invisible group-hover:visible hover:backdrop-blur-md`}></div>
-        <div className={`bg-18 w-[98%] h-[98%] absolute rounded-lg transition duration-300`}></div>
+          className={`${themeValues[theme]?.bg} group-hover:blur-[64px] w-2/3 h-[200%] absolute transition-opacity opacity-0 duration-1000 group-hover:animate-rotate invisible group-hover:visible hover:backdrop-blur-md`}></div>
+        <div className={`bg-18 w-[99%] h-[99%] absolute rounded-lg transition duration-300`}></div>
         {/* <span className="little-logo font-thin">{details.name}</span> */}
       </div>
       {/* arka planı bulanıklaştıran division */}
@@ -105,18 +105,24 @@ export default function ModelItem({ name, count }: Model) {
       {/* click olduğunda açılan bölümleri kapsayan root div */}
       <div
         className={classNames(
-          "w-full items-center md:items-start overflow-hidden md:w-[400px] lg:w-[700px] fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2",
+          "w-2/3 items-center md:items-start overflow-hidden md:w-[400px] lg:w-[700px] fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2",
           {
             hidden: !showDetail,
+          },
+          {
+            "justify-center": count < 2,
           }
         )}>
         {/* duruma göre solda veya yukarıda çıkan diğer açılardan resimler */}
         <div
-          className={classNames("flex flex-row lg:flex-col w-2/3 justify-start lg:w-1/4 items-start cursor-default", {
-            "!hidden unvisible": count < 2,
+          className={classNames("flex flex-row lg:flex-col w-full justify-start lg:w-1/4 items-start cursor-default", {
+            "!hidden": count < 2,
           })}>
           <div
-            className="bg-13/[0.6] rounded-lg border-[1px] w-full relative md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer"
+            className={classNames(
+              "bg-13/[0.6] rounded-lg border-[1px] w-full relative md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
+              { "!w-2/4": count < 3 }
+            )}
             onClick={() => handleImage("image2")}>
             <div className="block w-full aspect-square h-full">
               {count > 1 ? (
@@ -211,7 +217,7 @@ export default function ModelItem({ name, count }: Model) {
           </div>
         </div>
         {/* tıklandığında açılan büyük resim */}
-        <div className="bg-13/[0.6] rounded-lg w-2/3 lg:w-3/4 transition duration-300 aspect-square shadow z-40 flex items-center justtify-center">
+        <div className="bg-13/[0.6] rounded-lg w-full lg:w-3/4 transition duration-300 aspect-square shadow z-40 flex items-center justtify-center">
           <div className="block w-full aspect-square">
             <Image
               className={classNames("z-20", { "!hidden": !showDetail })}

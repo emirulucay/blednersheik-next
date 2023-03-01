@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="fixed top-0 h-[60px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-50 flex justify-between items-center">
+      <header className="fixed top-0 h-[56px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-50 flex justify-between items-center">
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(
@@ -27,11 +27,11 @@ export default function Header() {
             })}></span>
         </div>
         <div className="relative w-full container flex justify-center md:justify-between items-center h-[66px]">
-          <h1>
+          <strong>
             <Link href="/">
               <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-2xl select-none`}>blendersheik</a>
             </Link>
-          </h1>
+          </strong>
           <ul className="md:flex align-center justify-center gap-10 hidden flex-1">
             <li>
               <Link href="/models">
@@ -80,7 +80,7 @@ export default function Header() {
               href="https://www.instagram.com/blendersheik/"
               target="_blank"
               rel="noreferrer noopener">
-              Buy Models
+              Instagram
             </a>
             <ThemeChanger />
           </div>
