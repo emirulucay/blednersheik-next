@@ -19,6 +19,7 @@ module.exports = {
         darkbg: "#0D0D0D",
         "09": "#0c0c0c",
         87: "#878787",
+        97: "#979797",
         bgPurple: "#8D64FF",
         13: "#131315",
         spaceLink: "#899DFF",
@@ -33,7 +34,6 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: "1rem",
         // screens: {
         //   sm: "600px",
         //   md: "728px",

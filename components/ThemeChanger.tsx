@@ -32,7 +32,7 @@ export default function ThemeChanger() {
         )}>
         <ul className="flex flex-col" ref={menuRef}>
           <li
-            className="text-white/[0.7] tracking-tight font-medium w-full flex items-center gap-2 px-3 py-2 hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
+            className="text-97 tracking-tight font-medium w-full flex items-center gap-2 px-3 py-2 hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(1);
               setShowMenu(false);
@@ -42,7 +42,7 @@ export default function ThemeChanger() {
             Alien Green
           </li>
           <li
-            className="text-white/[0.7] tracking-tight font-medium w-full flex items-center gap-2 px-3 py-2 hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
+            className="text-97 tracking-tight font-medium w-full flex items-center gap-2 px-3 py-2 hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(2);
               setShowMenu(false);
@@ -52,7 +52,8 @@ export default function ThemeChanger() {
             Glacier Blue
           </li>
           <li
-            className="text-white/[0.7] tracking-tight font-medium w-full flex items-center gap-2 px-3 py-2 hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
+            className="text-97
+             tracking-tight font-medium w-full flex items-center gap-2 px-3 py-2 hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(3);
               setShowMenu(false);

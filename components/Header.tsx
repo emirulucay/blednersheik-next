@@ -36,7 +36,7 @@ export default function Header() {
             <li>
               <Link href="/models">
                 <a
-                  className={classNames("text-white/[0.59] hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
                     "!text-white": router.pathname == "/models",
                   })}>
                   Models
@@ -46,7 +46,7 @@ export default function Header() {
             <li>
               <Link href="/builds">
                 <a
-                  className={classNames("text-white/[0.59] hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
                     "!text-white": router.pathname == "/builds",
                   })}>
                   Builds
@@ -56,7 +56,7 @@ export default function Header() {
             <li>
               <Link href="/about">
                 <a
-                  className={classNames("text-white/[0.59] hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
                     "!text-white": router.pathname == "/about",
                   })}>
                   About
@@ -66,7 +66,7 @@ export default function Header() {
             <li>
               <Link href="/contact">
                 <a
-                  className={classNames("text-white/[0.59] hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
                     "!text-white": router.pathname == "/contact",
                   })}>
                   Contact

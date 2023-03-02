@@ -4,7 +4,7 @@ export default function Document() {
   const meta = {
     title: "blendersheik — Yahya Apaydın, blender works for me.",
     description: "The Blender Sheik — Yahya Apaydın. 3D Artist. Creating awesome models.",
-    url: "https://www.blendersheik.com",
+    url: "https://blendersheik.com",
   };
   return (
     <Html>

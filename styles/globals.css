@@ -48,6 +48,10 @@
 
 @layer components {
 
+  .pageTitle {
+    @apply text-white text-2xl font-semibold tracking-tight;
+  }
+
   .logo {
     letter-spacing: -0.03em;
   }

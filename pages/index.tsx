@@ -24,8 +24,8 @@ export default function Home() {
         {/* hero section */}
         <div className="mt-8 flex flex-col gap-4 min-h-[90vh] items-center font-inter w-full container py-16 md:py-24 lg:py-32">
           <h1 className="text-white text-4xl  md:text-6xl font-extrabold -tracking-[0.03em]">The Blender Sheik</h1>
-          <p className="text-center text-lg md:text-xl text-white/[.75] max-w-[522px]">
-            Hey, it’s Yahya. 19 years old graphical design student in Turkey. These are my works. So enjoy...
+          <p className="text-center text-lg md:text-xl text-97 max-w-[522px]">
+            Hey, it’s Yahya. 20 years old graphical design student in Turkey. These are my works. So enjoy...
           </p>
           {/* buttons div */}
           <div className="flex items-center justify-center gap-6 mt-4">
@@ -54,14 +54,10 @@ export default function Home() {
         {/* journey section */}
         <div className="bg-0a flex flex-col gap-12 py-16 md:py-24 lg:py-32" ref={heroRef}>
           <div className="container flex flex-col gap-4">
-            <h2 className="text-white text-2xl md:text-3xl font-bold font-inter tracking-tight">My Journey Started In 2020.</h2>
+            <h2 className="pageTitle md:text-3xl">My Journey Started In 2020.</h2>
             <p className="text-white/[.65] font-medium font-inter text-md md:text-lg leading-[1.55] w-full lg:w-[900px]">
               I started blender in COVID-19 process. I’m fully stayed home and improved to design 3d models. I’m sharing my newest designs
-              with this website. But if you wanna see my{" "}
-              <Link href="oldests">
-                <a className="border-b-[2px] border-white/[.45] transition-all duration-300 hover:border-white hover:text-white">designs</a>
-              </Link>{" "}
-              when I did beginner.
+              with this website.
             </p>
           </div>
           <div className="container block relative">
@@ -81,7 +77,7 @@ export default function Home() {
         {/* some models div */}
         <div className="py-16 md:py-24 lg:py-32 flex flex-col gap-6 container">
           <div className="flex flex-col">
-            <h3 className="font-inter font-bold text-2xl md:text-3xl text-white tracking-tight">Some Models In My Collection</h3>
+            <h3 className="pageTitle md:text-3xl">Some Models In My Collection</h3>
             <div className="float-left">
               <Link href="/models">
                 <a className={`${themeValues[theme]?.link} float-left text-md font-medium font-inter flex`}>See All</a>
