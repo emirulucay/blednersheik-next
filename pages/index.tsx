@@ -55,7 +55,7 @@ export default function Home() {
         <div className="bg-0a flex flex-col gap-12 py-16 md:py-24 lg:py-32" ref={heroRef}>
           <div className="container flex flex-col gap-4">
             <h2 className="pageTitle md:text-3xl">My Journey Started In 2020.</h2>
-            <p className="text-white/[.65] font-medium font-inter text-md md:text-lg leading-[1.55] w-full lg:w-[900px]">
+            <p className="text-97 font-medium font-inter text-md md:text-lg leading-[1.55] w-full lg:w-[900px]">
               I started blender in COVID-19 process. I’m fully stayed home and improved to design 3d models. I’m sharing my newest designs
               with this website.
             </p>
@@ -65,11 +65,11 @@ export default function Home() {
               className="rounded-xl"
               src="/images/myroom-2.png"
               width={1920}
-              height={1200}
+              height={1080}
               layout="responsive"
               priority
               quality={100}
-              objectFit="contain"
+              // objectFit="contain"
               alt="My room perspective"
             />
           </div>
