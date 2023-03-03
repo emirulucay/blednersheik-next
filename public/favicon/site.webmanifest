@@ -2,13 +2,7 @@
   "name": "Yahya Apaydın",
   "short_name": "Blendersheik",
   "description": "3D Artist",
-  "icons": [
-    {
-      "src": "/favicon/favicon-196x196.png",
-      "sizes": "196x196",
-      "type": "image/png"
-    }
-  ],
+  "icons": [],
   "background_color": "#FFFFFF",
   "theme_color": "#FFFFFF",
   "display": "standalone",
