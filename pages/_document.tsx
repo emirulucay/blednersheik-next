@@ -27,6 +27,7 @@ export default function Document() {
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:url" content={meta.url} />
+        <meta property="og:image" content="https://blendersheik.com/_next/image?url=%2Fsheik.jpg&w=1920&q=75" />
       </Head>
       <body>
         <Main />
