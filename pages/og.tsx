@@ -1,9 +1,10 @@
 import React from "react";
+import Image from "next/image";
 
 export default function () {
   return (
     <div>
-      <img src="/sheik.jpg" alt="Blendersheik" />
+      <Image src="/sheik.jpg" alt="blendersheik" layout="fill" objectFit="contain" />
     </div>
   );
 }
