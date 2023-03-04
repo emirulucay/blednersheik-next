@@ -17,6 +17,10 @@
     scroll-behavior: smooth;
   }
 
+  img {
+    user-select: none;
+  }
+
 
   ::-webkit-scrollbar {
     width: 14px;
