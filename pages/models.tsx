@@ -11,7 +11,7 @@ export default function Models() {
         <title>Models — blendersheik</title>
       </Head>
       <Layout>
-        <div className="mt-32 md:mt-40 container px-12 md:px-0">
+        <div className="mt-32 md:mt-40 container px-6 md:px-0">
           <div className="flex flex-col gap-6">
             <h3 className="pageTitle md:text-3xl">My Model Collection</h3>
             <div className="flex flex-col sm:flex-row sm:flex-wrap">

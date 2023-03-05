@@ -166,7 +166,7 @@ export default function Header() {
                 href="https://www.instagram.com/blednersheik/"
                 target="_blank"
                 rel="noreferrer noopener">
-                Buy
+                Instagram
               </a>
             </li>
           </ul>
