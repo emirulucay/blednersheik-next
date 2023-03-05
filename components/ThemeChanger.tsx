@@ -10,7 +10,6 @@ export default function ThemeChanger() {
 
   useEffect(() => {
     document.onclick = (e) => {
-      console.log(!e.composedPath().includes(menuRef.current) && !e.composedPath().includes(menuButton.current));
       if (!e.composedPath().includes(menuRef.current) && !e.composedPath().includes(menuButton.current)) {
         showMenu === true ? setShowMenu(false) : "";
       }
