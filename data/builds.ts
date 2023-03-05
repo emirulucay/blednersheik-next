@@ -33,7 +33,7 @@ export const builds:Model[] = [
   },
   {
     name:"modern-room",
-    count: 2
+    count: 1
   },
   {
     name:"kitchen",
