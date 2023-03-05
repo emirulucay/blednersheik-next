@@ -17,7 +17,7 @@ export default function Header() {
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(
-            "z-50 w-6 absolute left-6 top-1/2 md:hidden text-gray-100 -translate-y-1/2 flex items-center justify-center flex-col gap-3 cursor-pointer p-2",
+            "z-50 w-6 absolute left-5 top-1/2 md:hidden text-gray-100 -translate-y-1/2 flex items-center justify-center flex-col gap-3 cursor-pointer p-2",
             { "!gap-0": burgerOpen }
           )}>
           <span className={classNames("w-6 h-[1px] bg-white block transition-all duration-100", { "rotate-45": burgerOpen })}></span>

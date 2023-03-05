@@ -1,4 +1,5 @@
 import { ImageDetailInterface } from "types/types"
+import { Model } from "types/types"
 
 export const detailedImage:ImageDetailInterface = {
   src: "/images/myroom-1.png",
@@ -24,3 +25,35 @@ export const detailedImage:ImageDetailInterface = {
   },
 ]
 } 
+
+export const builds:Model[] = [
+  {
+    name:"vintage-kitchen",
+    count: 2
+  },
+  {
+    name:"modern-room",
+    count: 2
+  },
+  {
+    name:"kitchen",
+    count: 3
+  },
+  {
+    name:"wooden-house",
+    count: 1
+  },
+  {
+    name:"saul",
+    count: 1
+  },
+  {
+    name:"living-room",
+    count: 3
+  },
+  {
+    name:"bedroom",
+    count: 4
+  },
+
+]

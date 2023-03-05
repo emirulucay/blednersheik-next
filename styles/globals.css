@@ -52,8 +52,17 @@
 
 @layer components {
 
+  .fade-text {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 25%, rgba(255, 255, 255, 0.65) 100%);
+    @apply select-none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
   .pageTitle {
-    @apply text-white text-2xl font-semibold tracking-tight;
+    @apply text-white text-2xl font-bold tracking-tight fade-text;
   }
 
   .logo {

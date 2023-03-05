@@ -13,7 +13,7 @@ export default function About() {
         <title>About — blendersheik</title>
       </Head>
       <Layout>
-        <div className="container py-40 min-h-[80vh] flex justify-between flex-wrap-reverse">
+        <div className="container mt-24 lg:mt-40 min-h-[80vh] flex justify-between flex-wrap-reverse">
           <div className="w-full md:w-1/2 flex flex-col gap-8">
             <h2 className="pageTitle md:text-3xl">About Me</h2>
             <p className="text-md !line-p font-inter font-regular text-87 lg:text-lg tracking-tight">
@@ -25,13 +25,14 @@ export default function About() {
               business. It has become my hobby. That's why I opened this site to make money from my hobbies. So enjoy!
             </p>
           </div>
-          <div className="w-full flex items-center justify-center md:w-1/2">
+          <div className="w-full flex items-start justify-center md:w-1/2">
             <Image
               className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] select-none rounded-md"
               src="/images/sheik.jpg"
               alt="blednersheik"
               width={350}
               height={350}
+              objectFit="contain"
             />
           </div>
         </div>
