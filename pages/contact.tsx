@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import Head from "next/head";
 import { MainContext, useContext } from "context";
+import Image from "next/image";
 
 interface Values {
   name: string;
@@ -30,7 +31,7 @@ export default function Contact() {
         <title>Contact — blendersheik</title>
       </Head>
       <Layout>
-        <div className="container mx-auto min-h-[80vh] flex mt-24 lg:mt-40 gap-8 flex-wrap-reverse">
+        <div className="container mx-auto min-h-[80vh] flex mt-24 lg:mt-40 flex-wrap-reverse">
           {/* <div className="flex flex-col md:w-1/2 gap-8 w-full mt-12 md:mt-0">
             <h5 className="font-inter font-bold text-2xl md:text-3xl lg:text-4xl text-white tracking-tight">Send Me a Message</h5>
             <form noValidate className="flex flex-col gap-8 mt-2" onSubmit={handleSubmit}>
@@ -84,9 +85,9 @@ export default function Contact() {
               <button className={`${themeValues[theme]?.bg} button-sm inline w-[90px] font-inter font-medium text-white`} type="submit">
                 Send
               </button>
-            </form> */}
-          {/* </div> */}
-          <div className="flex flex-col gap-8 md:w-1/3 w-full">
+            </form>
+          </div> */}
+          <div className="flex flex-col gap-8 md:w-1/2 w-full">
             <h3 className="pageTitle md:text-3xl">Social Media</h3>
             <div className="flex gap-4 justify-start items-center mt-2">
               <FaLinkedin className="text-white text-5xl " />
@@ -127,6 +128,17 @@ export default function Contact() {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="flex items-start justify-center md:w-1/2 w-full">
+            <Image
+              className="rounded-lg"
+              src="/images/contactSheik.jpg"
+              alt="Blendersheik"
+              width={350}
+              height={350}
+              priority
+              quality={100}
+            />
           </div>
         </div>
       </Layout>
