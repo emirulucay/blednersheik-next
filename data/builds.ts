@@ -68,7 +68,7 @@ export const homeBuilds: Model[] = [
     count: 1
   },
   {
-    name:"modern-room",
+    name:"living-room",
     count: 3
   },
 ]
