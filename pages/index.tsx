@@ -8,7 +8,9 @@ import Layout from "components/Layout";
 import { useState, useRef, useEffect } from "react";
 import { MainContext, useContext } from "../context";
 import { homeModels } from "data/models";
+import { homeBuilds } from "data/builds";
 import cx from "classnames";
+import BuildItem from "components/BuildItem";
 
 export default function Home() {
   const { theme, themeValues } = useContext(MainContext);
@@ -28,14 +30,14 @@ export default function Home() {
             Hey, it’s Yahya. 20 years old graphical design student in Turkey. These are my works. So enjoy...
           </p>
           {/* buttons div */}
-          <div className="flex items-center justify-center gap-6 mt-4">
+          {/* <div className="flex items-center justify-center gap-6 mt-4">
             <a onClick={Explore} className={`${themeValues[theme]?.bg} button-md text-lg select-none`}>
               Explore
             </a>
             <Link href="/about">
               <a className={`text-white/[.85] hover:text-white font-medium text-lg leading-none`}>About</a>
             </Link>
-          </div>
+          </div> */}
           {/* hero image */}
           <div className="min-w-full w-full h-full block mt-8 rounded-lg relative lg:px-16">
             <Image
@@ -75,7 +77,7 @@ export default function Home() {
           </div>
         </div>
         {/* some models div */}
-        <div className="py-16 md:py-24 lg:py-32 flex flex-col gap-6 container">
+        <div className="py-12 mt-8 flex flex-col gap-6 container">
           <div className="flex flex-col">
             <h3 className="pageTitle md:text-3xl fade-text">Some Models In My Collection</h3>
             <div className="float-left">
@@ -92,7 +94,29 @@ export default function Home() {
             ))}
           </div>
         </div>
+        {/* some builds div */}
+        <div className="mt-4 py-12 flex flex-col gap-6 container">
+          <div className="flex flex-col">
+            <h3 className="pageTitle md:text-3xl fade-text">Some Builds In My Collection</h3>
+            <div className="float-left">
+              <Link href="/builds">
+                <a className={`${themeValues[theme]?.link} float-left text-md font-medium font-inter flex`}>See All</a>
+              </Link>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:flex-wrap">
+            {homeBuilds.map((build, index) => (
+              <div key={index} className="w-full sm:w-1/2 lg:w-1/3">
+                <BuildItem name={build.name} key={index} count={build.count} />
+              </div>
+            ))}
+          </div>
+        </div>
       </Layout>
     </>
   );
+}
+
+{
+  /*  */
 }

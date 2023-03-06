@@ -57,3 +57,18 @@ export const builds:Model[] = [
   },
 
 ]
+
+export const homeBuilds: Model[] = [
+  {
+    name:"vintage-kitchen",
+    count: 2
+  },
+  {
+    name:"saul",
+    count: 1
+  },
+  {
+    name:"modern-room",
+    count: 3
+  },
+]
