@@ -163,7 +163,7 @@ export default function Header() {
             <li>
               <a
                 className="text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl"
-                href="https://www.instagram.com/blednersheik/"
+                href="https://www.instagram.com/blendersheik/"
                 target="_blank"
                 rel="noreferrer noopener">
                 Instagram
