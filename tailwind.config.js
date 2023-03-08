@@ -20,6 +20,7 @@ module.exports = {
         "09": "#0c0c0c",
         87: "#878787",
         97: "#979797",
+        cc: "#CCCCCC",
         bgPurple: "#8D64FF",
         13: "#131315",
         spaceLink: "#899DFF",

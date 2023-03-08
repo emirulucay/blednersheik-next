@@ -10,11 +10,12 @@ function MyApp({ Component, pageProps }) {
 
   const themeValues = {
     1: {
-      bg: "greenBg",
-      logo: "greenLogo",
-      link: "greenLink",
-      selection: "selection:bg-greenSelection",
-      bgShadow: "greenBgShadow",
+      bg: "westBg",
+      logo: "westLogo",
+      link: "westLink",
+      selection: "selection:bg-westSelection",
+      bgShadow: "westBgShadow",
+      name: "West Sun",
     },
     2: {
       bg: "spaceBg",
@@ -22,13 +23,15 @@ function MyApp({ Component, pageProps }) {
       link: "spaceLink",
       selection: "selection:bg-spaceSelection",
       bgShadow: "spaceBgShadow",
+      name: "Glacier Blue",
     },
     3: {
-      bg: "westBg",
-      logo: "westLogo",
-      link: "westLink",
-      selection: "selection:bg-westSelection",
-      bgShadow: "westBgShadow",
+      bg: "greenBg",
+      logo: "greenLogo",
+      link: "greenLink",
+      selection: "selection:bg-greenSelection",
+      bgShadow: "greenBgShadow",
+      name: "Alien Green",
     },
   };
   const data = {

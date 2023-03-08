@@ -63,7 +63,7 @@ export default function Header() {
                 </a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/contact">
                 <a
                   className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
@@ -72,9 +72,9 @@ export default function Header() {
                   Contact
                 </a>
               </Link>
-            </li>
+            </li> */}
           </ul>
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-2">
             <a
               className={`${themeValues[theme]?.bg} button-sm font-inter transition duration-300 select-none text-sm font-medium`}
               href="https://www.instagram.com/blendersheik/"
@@ -146,7 +146,7 @@ export default function Header() {
                 </a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/contact">
                 <a
                   className={classNames(
@@ -159,7 +159,7 @@ export default function Header() {
                   Contact
                 </a>
               </Link>
-            </li>
+            </li> */}
             <li>
               <a
                 className="text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl"
