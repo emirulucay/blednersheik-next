@@ -43,7 +43,7 @@ export default function ThemeChanger() {
             onClick={() => {
               setTheme(1);
               setShowMenu(false);
-              localStorage.setItem("theme", "3");
+              localStorage.setItem("theme", "1");
             }}>
             <div className="w-4 h-4 westBg rounded-full"></div>
             West Sun
@@ -64,7 +64,7 @@ export default function ThemeChanger() {
             onClick={() => {
               setTheme(3);
               setShowMenu(false);
-              localStorage.setItem("theme", "1");
+              localStorage.setItem("theme", "3");
             }}>
             <div className="w-4 h-4 greenBg rounded-full"></div>
             Alien Green
