@@ -28,12 +28,12 @@ export default function Header() {
             })}></span>
         </div>
         <div className="relative w-full container flex justify-center md:justify-between items-center h-[66px]">
-          <strong>
+          <strong className="md:flex-1">
             <Link href="/">
               <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-2xl select-none`}>blendersheik</a>
             </Link>
           </strong>
-          <ul className="md:pl-8 md:flex align-center justify-center gap-10 hidden flex-1">
+          <ul className="md:flex align-center justify-center gap-10 hidden flex-1">
             <li>
               <Link href="/models">
                 <a
@@ -75,7 +75,7 @@ export default function Header() {
               </Link>
             </li> */}
           </ul>
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2 flex-1 justify-end">
             <a
               className={`${themeValues[theme]?.bg} button-sm transition duration-300 select-none text-sm items-center flex gap-1`}
               href="https://www.instagram.com/blendersheik/"
