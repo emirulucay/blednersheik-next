@@ -77,7 +77,7 @@ export default function Header() {
           </ul>
           <div className="hidden md:flex items-center gap-2 flex-1 justify-end">
             <a
-              className={`${themeValues[theme]?.bg} button-sm transition duration-300 select-none text-sm items-center flex gap-1`}
+              className={`${themeValues[theme]?.bg} button-sm transition duration-300 select-none text-[13px] py-[11px] items-center flex gap-1`}
               href="https://www.instagram.com/blendersheik/"
               target="_blank"
               rel="noreferrer noopener">
