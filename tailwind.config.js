@@ -5,12 +5,22 @@ module.exports = {
     extend: {
       animation: {
         rotate: "spin 2s linear infinite",
+        blurToView: "blurToView 1.5s linear 1",
+        viewToBlur: "viewToBlur 1s linear 1",
       },
       keyframes: {
         spin: {
           "0%": { transform: "rotate(00deg); opacity: 1" },
           "50%": { transform: "rotate(90deg); opacity: 0.5" },
           "100%": { transform: "rotate(180deg); opacity: 1" },
+        },
+        blurToView: {
+          "0%": { filter: "blur(36px)" },
+          "100%": { filter: "blur(0)" },
+        },
+        viewToBlur: {
+          "0%": { filter: "blur(0)" },
+          "100%": { filter: "blur(36px)" },
         },
       },
       colors: {
@@ -54,7 +64,7 @@ module.exports = {
             maxWidth: "632px",
           },
           "@screen md": {
-            maxWidth: "768px",
+            maxWidth: "900px",
           },
           "@screen lg": {
             maxWidth: "1024px",
