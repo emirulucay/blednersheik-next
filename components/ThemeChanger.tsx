@@ -38,7 +38,7 @@ export default function ThemeChanger() {
         )}>
         <ul className="flex flex-col" ref={menuRef}>
           <li
-            className="text-97
+            className="text-bb
              tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] rounded-[4px] text-sm cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(1);
@@ -49,7 +49,7 @@ export default function ThemeChanger() {
             Magic Sunset
           </li>
           <li
-            className="text-97 tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] text-sm rounded-[4px] cursor-pointer hover:text-white"
+            className="text-bb tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] text-sm rounded-[4px] cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(2);
               setShowMenu(false);
@@ -60,7 +60,7 @@ export default function ThemeChanger() {
           </li>
 
           <li
-            className="text-97 tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] text-sm rounded-[4px] cursor-pointer hover:text-white"
+            className="text-bb tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] text-sm rounded-[4px] cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(3);
               setShowMenu(false);

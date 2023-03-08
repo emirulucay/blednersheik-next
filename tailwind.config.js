@@ -31,6 +31,7 @@ module.exports = {
         87: "#878787",
         97: "#979797",
         cc: "#CCCCCC",
+        bb: "#BBBBBB",
         bgPurple: "#8D64FF",
         13: "#131315",
         spaceLink: "#899DFF",
