@@ -31,7 +31,7 @@ export default function ThemeChanger() {
       </div>
       <div
         className={classNames(
-          "absolute z-[1000] -left-[18px] top-10 p-1 bg-[#090909] backdrop-blur-md border border-3a rounded-lg transition-opacity duration-500 w-[200px] overflow-hidden",
+          "absolute z-[1000] -left-[18px] top-10 p-1 bg-[#090909] backdrop-blur-md border border-3a rounded-md transition-opacity duration-500 w-[200px] overflow-hidden",
           {
             "-translate-y-[200%] opacity-0 unvisible": !showMenu,
           }
@@ -39,7 +39,7 @@ export default function ThemeChanger() {
         <ul className="flex flex-col" ref={menuRef}>
           <li
             className="text-97
-             tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
+             tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] rounded-[4px] cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(1);
               setShowMenu(false);
@@ -49,7 +49,7 @@ export default function ThemeChanger() {
             West Sun
           </li>
           <li
-            className="text-97 tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
+            className="text-97 tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] rounded-[4px] cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(2);
               setShowMenu(false);
@@ -60,7 +60,7 @@ export default function ThemeChanger() {
           </li>
 
           <li
-            className="text-97 tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] rounded-md cursor-pointer hover:text-white"
+            className="text-97 tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] rounded-[4px] cursor-pointer hover:text-white"
             onClick={() => {
               setTheme(3);
               setShowMenu(false);
