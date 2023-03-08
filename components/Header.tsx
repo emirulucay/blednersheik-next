@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { MainContext, useContext } from "context";
 import ThemeChanger from "./ThemeChanger";
+import { LinkArrow } from "lib/icons";
 
 export default function Header() {
   const [burgerOpen, setBurgerOpen] = useState<boolean>(false);
@@ -32,7 +33,7 @@ export default function Header() {
               <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-2xl select-none`}>blendersheik</a>
             </Link>
           </strong>
-          <ul className="md:flex align-center justify-center gap-10 hidden flex-1">
+          <ul className="md:pl-8 md:flex align-center justify-center gap-10 hidden flex-1">
             <li>
               <Link href="/models">
                 <a
@@ -76,11 +77,12 @@ export default function Header() {
           </ul>
           <div className="hidden md:flex items-center gap-2">
             <a
-              className={`${themeValues[theme]?.bg} button-sm font-inter transition duration-300 select-none text-sm font-medium`}
+              className={`${themeValues[theme]?.bg} button-sm transition duration-300 select-none text-sm items-center flex gap-1`}
               href="https://www.instagram.com/blendersheik/"
               target="_blank"
               rel="noreferrer noopener">
               Instagram
+              <LinkArrow className="w-2 h-2" />
             </a>
             <ThemeChanger />
           </div>
@@ -162,11 +164,12 @@ export default function Header() {
             </li> */}
             <li>
               <a
-                className="text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl"
+                className="text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl flex items-center gap-2"
                 href="https://www.instagram.com/blendersheik/"
                 target="_blank"
                 rel="noreferrer noopener">
                 Instagram
+                <LinkArrow className="w-3 h-3" />
               </a>
             </li>
           </ul>
