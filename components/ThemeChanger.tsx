@@ -24,7 +24,7 @@ export default function ThemeChanger() {
         className={`flex items-center gap-2 border border-3a px-3 py-2 rounded-full cursor-pointer group transition duration-300`}
         onClick={() => setShowMenu((prev) => !prev)}>
         <div className={`${themeValues[theme]?.bg} transition-all w-[18px] h-[18px] rounded-full`}></div>
-        <div className="text-cc leading-none tracking-tight flex items-center gap-2 transition duration-300 group-hover:text-white w-28">
+        <div className="text-cc leading-none tracking-tight flex items-center justify-between pr-2 gap-2 transition duration-300 group-hover:text-white w-32">
           {themeValues[theme]?.name}
           <DownArrow />
         </div>
@@ -46,7 +46,7 @@ export default function ThemeChanger() {
               localStorage.setItem("theme", "1");
             }}>
             <div className="w-4 h-4 westBg rounded-full"></div>
-            West Sun
+            Magic Sunset
           </li>
           <li
             className="text-97 tracking-tight w-full flex items-center gap-2 px-3 py-[9px] hover:bg-a2/[0.6] rounded-[4px] cursor-pointer hover:text-white"

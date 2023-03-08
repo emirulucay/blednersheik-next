@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
       link: "westLink",
       selection: "selection:bg-westSelection",
       bgShadow: "westBgShadow",
-      name: "West Sun",
+      name: "Magic Sunset",
     },
     2: {
       bg: "spaceBg",
