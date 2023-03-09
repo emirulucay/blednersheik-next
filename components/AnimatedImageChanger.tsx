@@ -17,6 +17,7 @@ export default function AnimatedImageChanger() {
         alt="Blendersheik"
         layout="fill"
         objectFit="contain"
+        priority
       />
       <Image
         className={cx("absolute top-0 left-0 w-full aspect-square select-none rounded-lg transition duration-300 delay-700", {
@@ -27,6 +28,7 @@ export default function AnimatedImageChanger() {
         alt="Blendersheik"
         layout="fill"
         objectFit="contain"
+        priority
       />
       <Image
         className={cx("absolute top-0 left-0 w-full aspect-square select-none rounded-lg transition duration-300 delay-700", {
@@ -37,6 +39,7 @@ export default function AnimatedImageChanger() {
         alt="Blendersheik"
         layout="fill"
         objectFit="contain"
+        priority
       />
     </div>
   );
