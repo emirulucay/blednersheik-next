@@ -1,14 +1,10 @@
 import React from "react";
 import Layout from "components/Layout";
-import sheik from "public/sheik.png";
-import Image from "next/image";
 import Head from "next/head";
-import { useState } from "react";
 import AnimatedImageChanger from "components/AnimatedImageChanger";
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+// import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function About() {
-  const [state, setState] = useState<boolean>();
   return (
     <>
       <Head>

@@ -1,22 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
-import Footer from "components/Footer";
-import Header from "components/Header";
 import ModelItem from "components/ModelItem";
 import Link from "next/link";
 import Layout from "components/Layout";
-import { useState, useRef, useEffect } from "react";
+import { useRef } from "react";
 import { MainContext, useContext } from "../context";
 import { homeModels } from "data/models";
 import { homeBuilds } from "data/builds";
-import cx from "classnames";
 import BuildItem from "components/BuildItem";
+// import cx from "classnames";
 
 export default function Home() {
   const { theme, themeValues } = useContext(MainContext);
   const heroRef = useRef(null);
 
-  const Explore = () => heroRef.current.scrollIntoView();
+  // const Explore = () => heroRef.current.scrollIntoView();
   return (
     <>
       <Head>
