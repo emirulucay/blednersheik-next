@@ -4,6 +4,8 @@ import sheik from "public/sheik.png";
 import Image from "next/image";
 import Head from "next/head";
 import { useState } from "react";
+import AnimatedImageChanger from "components/AnimatedImageChanger";
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function About() {
   const [state, setState] = useState<boolean>();
@@ -24,17 +26,17 @@ export default function About() {
               I don't know if you know but I can't make money off these designs because I'm doing this for myself, not as a private
               business. It has become my hobby. That's why I opened this site to make money from my hobbies. So enjoy!
             </p>
+            {/* <div className="flex items-center gap-4 mt-4">
+              <a href="https://instagram.com/blendersheik" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-2xl text-97 transition duration-300 hover:text-white" />
+              </a>
+              <a href="https://instagram.com/blendersheik" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-2xl text-97 transition duration-300 hover:text-white" />
+              </a>
+            </div> */}
           </div>
           <div className="w-full flex relative md:w-1/3 !aspect-square mb-8 md:mb-0">
-            <Image
-              className="w-full aspect-square select-none rounded-md"
-              src="/images/sheik.jpg"
-              alt="blednersheik"
-              // width="100%"
-              // height="100%"
-              layout="fill"
-              objectFit="contain"
-            />
+            <AnimatedImageChanger />
           </div>
         </div>
       </Layout>

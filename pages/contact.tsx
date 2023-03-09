@@ -1,6 +1,6 @@
 import Layout from "components/Layout";
 import { useFormik } from "formik";
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+
 import Head from "next/head";
 import { MainContext, useContext } from "context";
 import Image from "next/image";
@@ -90,7 +90,7 @@ export default function Contact() {
           <div className="flex flex-col gap-6 md:gap-8 md:w-1/2 w-full">
             <h3 className="pageTitle md:text-3xl">Social Media</h3>
             <div className="flex gap-4 justify-start items-center mt-2">
-              <FaLinkedin className="text-white text-5xl " />
+              {/* <FaLinkedin className="text-white text-5xl " /> */}
               <div className="flex flex-col gap-1">
                 <h2 className="text-gray-200 text-lg font-medium leading-none font-inter">Yahya Apaydın</h2>
                 <a
@@ -103,7 +103,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex gap-4">
-              <FaTwitter className="text-white text-5xl -translate-y-1" />
+              {/* <FaTwitter className="text-white text-5xl -translate-y-1" /> */}
               <div className="flex flex-col gap-1">
                 <h2 className="text-gray-200 text-lg font-medium leading-none font-inter">blendersheik</h2>
                 <a
@@ -116,7 +116,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex gap-4">
-              <FaInstagram className="text-white text-5xl -translate-y-1" />
+              {/* <FaInstagram className="text-white text-5xl -translate-y-1" /> */}
               <div className="flex flex-col gap-1">
                 <h2 className="text-gray-200 text-lg font-medium leading-none font-inter">blendersheik</h2>
                 <a
