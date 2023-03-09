@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import classNames from "classnames";
+import cx from "classnames";
 import Image from "next/image";
 import { Model } from "types/types";
 import { MainContext, useContext } from "context";
@@ -99,12 +99,12 @@ export default function ModelItem({ name, count }: Model) {
       {/* arka planı bulanıklaştıran division */}
       <div
         onClick={() => setShowDetail(false)}
-        className={classNames("fixed backdrop-blur-md top-0 left-0 w-full h-full z-20 cursor-default select-none", {
+        className={cx("fixed backdrop-blur-md top-0 left-0 w-full h-full z-20 cursor-default select-none", {
           "!hidden": !showDetail,
         })}></div>
       {/* click olduğunda açılan bölümleri kapsayan root div */}
       <div
-        className={classNames(
+        className={cx(
           "w-2/3 items-center md:items-start overflow-hidden md:w-[400px] lg:w-[700px] fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col lg:flex-row gap-2",
           {
             hidden: !showDetail,
@@ -115,19 +115,22 @@ export default function ModelItem({ name, count }: Model) {
         )}>
         {/* duruma göre solda veya yukarıda çıkan diğer açılardan resimler */}
         <div
-          className={classNames("flex flex-row lg:flex-col w-full justify-start lg:w-1/4 items-start cursor-default", {
+          className={cx("flex flex-row lg:flex-col w-full justify-start lg:w-1/4 items-start cursor-default", {
             "!hidden": count < 2,
           })}>
           <div
-            className={classNames(
-              "bg-13/[0.6] rounded-lg border-[1px] w-full relative md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer"
+            className={cx(
+              "bg-13/[0.6] rounded-lg border w-full relative md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
+              {
+                "w-1/2 md:w-1/3 lg:w-full": count === 2,
+              }
             )}
             onClick={() => handleImage("image2")}>
             <div className="block w-full aspect-square h-full">
               {count > 1 ? (
                 <Image
                   src={selectedImg.otherImages[0]}
-                  alt="item"
+                  alt="Blendersheik Model"
                   width="100%"
                   height="100%"
                   quality={100}
@@ -138,7 +141,7 @@ export default function ModelItem({ name, count }: Model) {
               ) : (
                 <Image
                   src={selectedImg.otherImages[0]}
-                  alt="item"
+                  alt="Blendersheik Model"
                   width="100%"
                   height="100%"
                   quality={100}
@@ -149,7 +152,7 @@ export default function ModelItem({ name, count }: Model) {
             </div>
           </div>
           <div
-            className={classNames(
+            className={cx(
               "bg-13/[0.6] rounded-lg border-[1px] relative w-full md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
               {
                 "!hidden invisible": count < 3,
@@ -160,7 +163,7 @@ export default function ModelItem({ name, count }: Model) {
               {count > 2 ? (
                 <Image
                   src={selectedImg.otherImages[1]}
-                  alt="item"
+                  alt="Blendersheik Model"
                   width="100%"
                   height="100%"
                   quality={100}
@@ -171,7 +174,7 @@ export default function ModelItem({ name, count }: Model) {
               ) : (
                 <Image
                   src={selectedImg.otherImages[1]}
-                  alt="item"
+                  alt="Blendersheik Model"
                   width="100%"
                   height="100%"
                   quality={100}
@@ -182,7 +185,7 @@ export default function ModelItem({ name, count }: Model) {
             </div>
           </div>
           <div
-            className={classNames(
+            className={cx(
               "bg-13/[0.6] rounded-lg border-[1px] relative w-full md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
               {
                 "!hidden invisible": count < 4,
@@ -193,7 +196,7 @@ export default function ModelItem({ name, count }: Model) {
               {count > 3 ? (
                 <Image
                   src={selectedImg.otherImages[2]}
-                  alt="item"
+                  alt="Blendersheik Model"
                   width="100%"
                   height="100%"
                   quality={100}
@@ -204,7 +207,7 @@ export default function ModelItem({ name, count }: Model) {
               ) : (
                 <Image
                   src={selectedImg.otherImages[2]}
-                  alt="item"
+                  alt="Blendersheik Model"
                   width="100%"
                   height="100%"
                   quality={100}
@@ -219,7 +222,7 @@ export default function ModelItem({ name, count }: Model) {
         <div className="bg-13/[0.6] rounded-lg w-full lg:w-3/4 transition duration-300 aspect-square shadow z-40 flex items-center justtify-center">
           <div className="block w-full aspect-square">
             <Image
-              className={classNames("z-20", { "!hidden": !showDetail })}
+              className={cx("z-20", { "!hidden": !showDetail })}
               src={selectedImg.selected}
               alt={details.name}
               width="100%"

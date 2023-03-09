@@ -120,7 +120,8 @@ export default function BuildItem({ name, count }: Model) {
           })}>
           <div
             className={classNames(
-              "bg-13/[0.6] rounded-lg border-[1px] w-full relative md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer"
+              "bg-13/[0.6] rounded-lg border-[1px] w-full relative md:w-1/3 lg:w-full xl:w-full border-white/[0.15] transition-all flex items-center justify-center duration-300 z-40 p-2 select-none cursor-pointer",
+              { "w-1/2 md:w-1/3 lg:w-full": count === 2 }
             )}
             onClick={() => handleImage("image2")}>
             <div className="block w-full aspect-square h-full">
