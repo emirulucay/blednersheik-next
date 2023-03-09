@@ -28,6 +28,13 @@ export default function Document() {
         <meta property="og:title" content={meta.title} />
         <meta property="og:url" content={meta.url} />
         <meta property="og:image" content="https://blendersheik.com/_next/image?url=%2Fsheik.jpg&w=1920&q=75" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="blendersheik.com" />
+        <meta property="twitter:url" content="https://blendersheik.com" />
+        <meta name="twitter:title" content="blendersheik — Yahya Apaydın, blender works for me." />
+        <meta name="twitter:description" content="The Blender Sheik — Yahya Apaydın. 3D Artist. Creating awesome models." />
+        <meta name="twitter:image" content="https://blendersheik.com/_next/image?url=%2Fsheik.jpg&w=1920&q=75" />
       </Head>
       <body>
         <Main />
