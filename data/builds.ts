@@ -32,10 +32,6 @@ export const builds:Model[] = [
     count: 2
   },
   {
-    name:"vintage-kitchen",
-    count: 2
-  },
-  {
     name:"modern-room",
     count: 1
   },
@@ -65,7 +61,7 @@ export const builds:Model[] = [
 
 export const homeBuilds: Model[] = [
   {
-    name:"vintage-kitchen",
+    name:"library",
     count: 2
   },
   {
