@@ -28,6 +28,10 @@ export const detailedImage:ImageDetailInterface = {
 
 export const builds:Model[] = [
   {
+    name:"library",
+    count: 2
+  },
+  {
     name:"vintage-kitchen",
     count: 2
   },
@@ -55,6 +59,7 @@ export const builds:Model[] = [
     name:"bedroom",
     count: 4
   },
+
 
 ]
 
