@@ -22,9 +22,9 @@ export default function Home() {
       </Head>
       <Layout>
         {/* hero section */}
-        <div className="mt-8 flex flex-col gap-4 min-h-[90vh] items-center font-inter w-full container py-16 md:py-24 lg:py-32">
-          <h1 className="text-white text-4xl  md:text-6xl font-extrabold -tracking-[0.03em] fade-text">The Blender Sheik</h1>
-          <p className="text-center text-lg md:text-xl text-97 max-w-[522px]">
+        <div className="flex flex-col gap-3 min-h-[90vh] items-center font-inter w-full container py-16 md:py-24 lg:py-32">
+          <h1 className="text-white text-4xl md:text-6xl font-extrabold -tracking-[0.03em] fade-text">The Blender Sheik</h1>
+          <p className="text-center text-lg md:text-lg text-97 max-w-[522px]">
             Hey, it’s Yahya. 19 years old graphical design student in Turkey. These are my works. So enjoy...
           </p>
           {/* buttons div */}
@@ -37,10 +37,10 @@ export default function Home() {
             </Link>
           </div> */}
           {/* hero image */}
-          <div className="min-w-full w-full h-full block mt-8 rounded-lg relative lg:px-16">
+          <div className="min-w-full w-full h-full block mt-8 rounded-lg relative">
             <Image
               className="rounded-md"
-              src="/images/myroom-1.png"
+              src="/images/homepage/1.png"
               layout="responsive"
               priority
               quality={100}
@@ -62,8 +62,8 @@ export default function Home() {
           </div>
           <div className="container block relative">
             <Image
-              className="rounded-xl"
-              src="/images/myroom-2.png"
+              className="rounded-md"
+              src="/images/homepage/2.png"
               width={1920}
               height={1080}
               layout="responsive"

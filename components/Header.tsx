@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="fixed top-0 h-[56px] left-0 w-full bg-darkbg/[0.8] backdrop-blur-sm before:absolute before:bottom-0 before:bg-a2 before:w-full before:h-[0.5px] z-50 before:z-50 flex justify-between items-center">
+      <header className="fixed top-0 h-[52px] left-0 w-full bg-darkbg/[0.6] backdrop-blur-sm before:absolute before:bottom-0 before:bg-[#202020] before:w-full before:h-[0.5px] z-50 before:z-50 flex justify-between items-center">
         <div
           onClick={() => setBurgerOpen((prev) => !prev)}
           className={classNames(
@@ -30,10 +30,11 @@ export default function Header() {
         <div className="relative w-full container flex justify-center md:justify-between items-center h-[66px]">
           <strong className="md:flex-1">
             <Link href="/">
-              <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-2xl select-none`}>blendersheik</a>
+              <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-[22px] select-none`}>blendersheik</a>
             </Link>
           </strong>
-          <ul className="md:flex align-center justify-center gap-10 hidden flex-1">
+          {/* desktop menu */}
+          <ul className="md:flex align-center justify-center gap-8 hidden flex-1">
             <li>
               <Link href="/models">
                 <a
@@ -76,16 +77,9 @@ export default function Header() {
             </li> */}
           </ul>
           <div className="hidden md:flex items-center gap-2 flex-1 justify-end">
-            <a
-              className={`${themeValues[theme]?.bg} button-sm transition duration-300 select-none text-[13px] py-[11px] items-center flex gap-1`}
-              href="https://www.instagram.com/blendersheik/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Instagram
-              <LinkArrow className="w-2 h-2" />
-            </a>
             <ThemeChanger />
           </div>
+          {/* mobil burger menu */}
           <ul
             className={classNames(
               "w-full h-[100vh] flex md:hidden fixed top-[60px] left-0 flex-col bg-09/[.99] backdrop-blur-sm gap-8 px-6 py-6 transition duration-300 z-50",

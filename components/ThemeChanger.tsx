@@ -21,7 +21,7 @@ export default function ThemeChanger() {
     <div className="relative select-none transition duration-300">
       <div
         ref={menuButton}
-        className={`flex items-center gap-2 border border-3a px-3 py-2 rounded-full cursor-pointer group transition duration-300`}
+        className={`flex items-center gap-2 border border-3a px-3 py-0 min-h-[32px] rounded-full cursor-pointer group transition duration-300`}
         onClick={() => setShowMenu((prev) => !prev)}>
         <div className={`${themeValues[theme]?.bg} transition-all w-[17px] h-[17px] rounded-full`}></div>
         <div className="text-cc leading-none tracking-tight flex items-center justify-between pr-2 text-sm gap-2 transition duration-300 group-hover:text-white w-28">
@@ -31,7 +31,7 @@ export default function ThemeChanger() {
       </div>
       <div
         className={classNames(
-          "absolute z-[1000] -left-[18px] top-10 p-1 bg-[#090909] backdrop-blur-md border border-3a rounded-md transition-opacity duration-500 w-[200px] overflow-hidden",
+          "absolute z-[1000] -left-[18px] top-11 p-1 bg-[#090909] backdrop-blur-md border border-[#2c2c2c] rounded-[3px] transition-opacity duration-500 w-[200px] overflow-hidden",
           {
             "-translate-y-[200%] opacity-0 unvisible": !showMenu,
           }
