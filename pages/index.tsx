@@ -39,7 +39,7 @@ export default function Home() {
           {/* hero image */}
           <div className="min-w-full w-full h-full block mt-8 rounded-lg relative lg:px-16">
             <Image
-              className="rounded-xl"
+              className="rounded-md"
               src="/images/myroom-1.png"
               layout="responsive"
               priority
