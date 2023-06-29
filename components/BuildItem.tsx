@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import classNames from "classnames";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Model } from "types/types";
 import { MainContext, useContext } from "context";
 

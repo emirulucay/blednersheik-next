@@ -29,40 +29,37 @@ export default function Header() {
         </div>
         <div className="relative w-full container flex justify-center md:justify-between items-center h-[66px]">
           <strong className="md:flex-1">
-            <Link href="/">
-              <a className={`${themeValues[theme]?.logo} logo font-inter font-bold text-[22px] select-none`}>blendersheik</a>
+            <Link href="/" className={`${themeValues[theme]?.logo} logo font-inter font-bold text-[22px] select-none`}>
+              blendersheik
             </Link>
           </strong>
           {/* desktop menu */}
           <ul className="md:flex align-center justify-center gap-8 hidden flex-1">
             <li>
-              <Link href="/models">
-                <a
-                  className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
-                    "!text-white": router.pathname == "/models",
-                  })}>
-                  Models
-                </a>
+              <Link
+                href="/models"
+                className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  "!text-white": router.pathname == "/models",
+                })}>
+                Models
               </Link>
             </li>
             <li>
-              <Link href="/builds">
-                <a
-                  className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
-                    "!text-white": router.pathname == "/builds",
-                  })}>
-                  Builds
-                </a>
+              <Link
+                href="/builds"
+                className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  "!text-white": router.pathname == "/builds",
+                })}>
+                Builds
               </Link>
             </li>
             <li>
-              <Link href="/about">
-                <a
-                  className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
-                    "!text-white": router.pathname == "/about",
-                  })}>
-                  About
-                </a>
+              <Link
+                href="/about"
+                className={classNames("text-97 hover:text-white font-inter font-medium transition duration-300 select-none", {
+                  "!text-white": router.pathname == "/about",
+                })}>
+                About
               </Link>
             </li>
             {/* <li>
@@ -88,58 +85,39 @@ export default function Header() {
               }
             )}>
             <li>
-              <Link href="/">
-                <a
-                  className={classNames(
-                    "text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl",
-                    {
-                      "!text-white": router.pathname == "/",
-                    }
-                  )}>
-                  Home
-                </a>
+              <Link
+                href="/"
+                className={classNames("text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl", {
+                  "!text-white": router.pathname == "/",
+                })}>
+                Home
               </Link>
             </li>
             <li>
-              <Link href="/models">
-                <a
-                  className={classNames(
-                    "text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl",
-                    {
-                      "!text-white": router.pathname == "/models",
-                    }
-                  )}
-                  href="#">
-                  Models
-                </a>
+              <Link
+                href="/models"
+                className={classNames("text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl", {
+                  "!text-white": router.pathname == "/models",
+                })}>
+                Models
               </Link>
             </li>
             <li>
-              <Link href="/builds">
-                <a
-                  className={classNames(
-                    "text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl",
-                    {
-                      "!text-white": router.pathname == "/builds",
-                    }
-                  )}
-                  href="#">
-                  Builds
-                </a>
+              <Link
+                href="/builds"
+                className={classNames("text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl", {
+                  "!text-white": router.pathname == "/builds",
+                })}>
+                Builds
               </Link>
             </li>
             <li>
-              <Link href="/about">
-                <a
-                  className={classNames(
-                    "text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl",
-                    {
-                      "!text-white": router.pathname == "/about",
-                    }
-                  )}
-                  href="#">
-                  About
-                </a>
+              <Link
+                href="/about"
+                className={classNames("text-gray-400 hover:text-white font-inter font-medium transition duration-300 select-none text-xl", {
+                  "!text-white": router.pathname == "/about",
+                })}>
+                About
               </Link>
             </li>
             {/* <li>
