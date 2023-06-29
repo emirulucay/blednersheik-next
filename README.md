@@ -1,34 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![blendersheik-readme](https://github.com/emirulucay/blednersheik-next/assets/74816727/b7f07b81-ed0e-479c-a70e-e24f3214a61c)
 
-## Getting Started
+# Blendersheik
 
-First, run the development server:
+Blendersheik is a design studio based on the 3b model. Currently, there are two people in the team. [@emir](https://twitter.com/astrodokki) works in sales and web design, while  [@yahya](https://twitter.com/yahyarsen) is the person who designs 3b models. Therefore, Yahya is an important member of the company.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Models
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Yahya is interested in model studies. He usually comes up with the ideas as well. Only custom models are made through special orders. Emir is responsible for the ordering process.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Special Collections
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Special Collections are the products that we label as our favorite ones made under the Blendersheik brand. These products are sold at a slightly higher price, but they are definitely worth every penny.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
