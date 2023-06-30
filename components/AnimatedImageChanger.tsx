@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { MainContext, useContext } from "context";
 import cx from "classnames";
 

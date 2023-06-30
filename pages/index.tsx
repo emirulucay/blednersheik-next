@@ -8,6 +8,7 @@ import { MainContext, useContext } from "../context";
 import { homeModels } from "data/models";
 import { homeBuilds } from "data/builds";
 import BuildItem from "components/BuildItem";
+import { motion } from "framer-motion";
 // import cx from "classnames";
 
 export default function Home() {
@@ -23,10 +24,21 @@ export default function Home() {
       <Layout>
         {/* hero section */}
         <div className="flex flex-col gap-3 min-h-[90vh] items-center font-inter w-full container py-16 md:py-24 lg:py-32">
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold -tracking-[0.03em] fade-text">The Blender Sheik</h1>
-          <p className="text-center text-lg md:text-lg text-97 max-w-[522px]">
-            Hey, it’s Yahya. 19 years old graphical design student in Turkey. These are my works. So enjoy...
-          </p>
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(-10px)" }}
+            animate={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.4 }}>
+            <h1 className="text-white text-4xl md:text-6xl font-bold -tracking-[0.03em] fade-text">The Blender Sheik</h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(-10px)" }}
+            animate={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.4, delay: 0.15 }}>
+            <p className="text-center text-lg md:text-lg text-97 max-w-[522px]">
+              Hey, it’s Yahya. 19 years old graphical design student in Turkey. These are my works. So enjoy...
+            </p>{" "}
+          </motion.div>
+
           {/* buttons div */}
           {/* <div className="flex items-center justify-center gap-6 mt-4">
             <a onClick={Explore} className={`${themeValues[theme]?.bg} button-md text-lg select-none`}>
@@ -37,7 +49,11 @@ export default function Home() {
             </Link>
           </div> */}
           {/* hero image */}
-          <div className="min-w-full w-full h-full block mt-8 rounded-lg relative">
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(-15px)" }}
+            animate={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.4, delay: 0.3 }}
+            className="min-w-full w-full h-full block rounded-lg relative mt-8">
             <Image
               className="rounded-md"
               src="/images/homepage/1.png"
@@ -49,7 +65,7 @@ export default function Home() {
               objectFit="contain"
               alt="My room"
             />
-          </div>
+          </motion.div>
         </div>
         {/* journey section */}
         <div className="bg-0a flex flex-col gap-12 py-16 md:py-24 lg:py-32" ref={heroRef}>
@@ -79,8 +95,8 @@ export default function Home() {
           <div className="flex flex-col">
             <h3 className="pageTitle md:text-3xl fade-text">Some Models In My Collection</h3>
             <div className="float-left">
-              <Link href="/models">
-                <a className={`${themeValues[theme]?.link} float-left text-md font-medium font-inter flex`}>See All</a>
+              <Link href="/models" className={`${themeValues[theme]?.link} float-left text-md font-medium font-inter flex`}>
+                See All
               </Link>
             </div>
           </div>
@@ -97,8 +113,8 @@ export default function Home() {
           <div className="flex flex-col">
             <h3 className="pageTitle md:text-3xl fade-text">Some Builds In My Collection</h3>
             <div className="float-left">
-              <Link href="/builds">
-                <a className={`${themeValues[theme]?.link} float-left text-md font-medium font-inter flex`}>See All</a>
+              <Link href="/builds" className={`${themeValues[theme]?.link} float-left text-md font-medium font-inter flex`}>
+                See All
               </Link>
             </div>
           </div>
